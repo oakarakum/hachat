@@ -59,8 +59,8 @@ class SplashPage extends GetView<SplashController> {
               delay: const Duration(milliseconds: 500),
               child: Text(
                 'Coded by FIORES GLOBAL',
-                style: GoogleFonts.ptSerif(
-                    fontWeight: FontWeight.w500,
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
                     fontSize: 2.h,
                     color: Colors.black),
               ),
