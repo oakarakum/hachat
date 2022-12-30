@@ -19,6 +19,7 @@ class LoginPage extends GetView<LoginController> {
           backgroundColor: Colors.white,
         ),
         body: SingleChildScrollView(
+          physics: NeverScrollableScrollPhysics(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -41,63 +42,78 @@ class LoginPage extends GetView<LoginController> {
                       Padding(
                         padding: EdgeInsets.only(top: 1.2.h, bottom: 1.2.h),
                         child: Text(
-                          "Login to your account",
+                          "Hesabına giriş yap",
                           style: TextStyle(
                               color: Color(0xffe53935),
                               fontSize: 3.h,
                               fontWeight: FontWeight.w400),
                         ),
                       ),
-                      TextFormField(
-                        onChanged: (value) {
-                          //controller.email = value;
-                        },
-                        style: TextStyle(color: Color(0xff263238)),
-                        keyboardType: TextInputType.emailAddress,
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        validator: (value) {
-                          if (!GetUtils.isEmail(value!)) {
-                            return "Email isn't valid";
-                          } else if (value.isEmpty) {
-                            return "Empty field";
-                          } else {
-                            return null;
-                          }
-                        },
-                        textAlignVertical: TextAlignVertical.center,
-                        decoration: InputDecoration(
-                          isDense: true,
-                          prefixIcon: Icon(
-                            Icons.email,
-                            color: Color(0xffe53935),
-                          ),
-                          hintText: "E-Mail",
-                          hintStyle: TextStyle(
-                              color: Color(0xffe53935),
-                              letterSpacing: 2.5,
-                              fontWeight: FontWeight.w500),
-                          enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color(0xff000a12), width: 0.2.w)),
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color(0xff000a12), width: 0.2.w)),
-                        ),
-                      ),
                       Row(
+
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "Password",
+                            "E-mail:",
                             style: TextStyle(
-                                color: Color(0xffFFFFFF),
+                                  color: Color(0xff000a12),
                                 letterSpacing: 1,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 2.h),
                           ),
                         ],
                       ),
-                      SizedBox(
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 1.h),
+                        child: TextFormField(
+                          style: TextStyle(color: Color(0xff263238)),
+                          keyboardType: TextInputType.emailAddress,
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          validator: (value) {
+                            if (!GetUtils.isEmail(value!)) {
+                              return "Email formatına uygun değil";
+                            } else if (value.isEmpty) {
+                              return "Alan boş bırakılamaz.";
+                            } else {
+                              return null;
+                            }
+                          },
+                          textAlignVertical: TextAlignVertical.center,
+                          decoration: InputDecoration(
+                            isDense: true,
+                            prefixIcon: Icon(
+                              Icons.email,
+                                  color: const Color(0xff000a12),
+                            ),
+                            hintText: "E-Mail",
+                            hintStyle: TextStyle(
+                                color: Color(0xffe53935),
+                                letterSpacing: 2.5,
+                                fontWeight: FontWeight.w500),
+                            enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color(0xff000a12),
+                                     width: 0.2.w)),
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color(0xff000a12), width: 0.2.w)),
+                          ),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Şifre:",
+                            style: TextStyle(
+                                  color: Color(0xff000a12),
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 2.h),
+                          ),
+                        ],
+                      ),
+                      SizedBox(//
                         height: 1.h,
                       ),
                       Obx(() => Padding(
@@ -119,7 +135,7 @@ class LoginPage extends GetView<LoginController> {
                                     AutovalidateMode.onUserInteraction,
                                 validator: (value) {
                                   if (value!.isEmpty) {
-                                    return "Field is empty";
+                                    return "Alan boş bırakılamaz.";
                                   }
                                 },
                                 textAlignVertical: TextAlignVertical.center,
@@ -127,7 +143,7 @@ class LoginPage extends GetView<LoginController> {
                                   isDense: true,
                                   prefixIcon: Icon(
                                     Icons.key_sharp,
-                                    color: Color(0xffe53935),
+                                  color: const Color(0xff000a12),
                                   ),
                                   suffixIcon: GestureDetector(
                                     onTap: () {
@@ -140,7 +156,7 @@ class LoginPage extends GetView<LoginController> {
                                       size: 3.3.h,
                                     ),
                                   ),
-                                  hintText: "Password",
+                                  hintText: "Şifre",
                                   hintStyle: TextStyle(
                                       color: Color(0xffe53935),
                                       letterSpacing: 1,
@@ -171,7 +187,7 @@ class LoginPage extends GetView<LoginController> {
                         ],
                       ),
                       SizedBox(
-                        height: 6.h,
+                        height: 3.h,
                       ),
                       Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -204,6 +220,7 @@ class LoginPage extends GetView<LoginController> {
               )
             ],
           ),
-        ));
+        )
+        );
   }
 }
