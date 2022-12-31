@@ -30,11 +30,7 @@ RxInt tabIndex = 3.obs;
           Get.toNamed(Routes.HOME);
         },
         child: Icon(Icons.home, size: 3.5.h, color: const Color(0xff4a148c))),
-    GestureDetector(
-      onTap: () {
-        Get.toNamed(Routes.RINGS);
-      },
-      child: Icon(Icons.bus_alert, size: 3.5.h, color: const Color(0xff4a148c))),
+    Icon(Icons.bus_alert, size: 3.5.h, color: const Color(0xff4a148c)),
     GestureDetector(
       onTap: () {
         Get.toNamed(Routes.FOOD);
