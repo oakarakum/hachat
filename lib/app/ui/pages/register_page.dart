@@ -297,7 +297,7 @@ class RegisterPage extends GetView<RegisterController> {
                           ),
                           //--------------Okul No------------------//
                           Padding(
-                            padding: EdgeInsets.only(top: 2.h,bottom: 1.1.h),
+                            padding: EdgeInsets.only(top: 2.h, bottom: 1.1.h),
                             child: TextFormField(
                               style: const TextStyle(color: Color(0xff263238)),
                               autovalidateMode:
@@ -344,33 +344,35 @@ class RegisterPage extends GetView<RegisterController> {
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 1.7.h),
                             child: GestureDetector(
-                        onTap: () {
-                          controller.dialog();
-                          //controller.snackBar();
-                        },
-                        child: Container(
-                          height: 7.h,
-                          width: 100.w,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5.w),
-                              gradient: const LinearGradient(
-                                colors: [Color(0xfffafafa),
-                                 Color(0xffffa4a2)],
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight,
-                              )),
-                          child: Center(
-                            child: Text(
-                              "Hesap Oluştur",
-                              style: TextStyle(
-                                  color: const Color(0xffe53935),
-                                  fontSize: 2.7.h,
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 1),
+                              onTap: () {
+                                controller.dialog();
+                                //controller.snackBar();
+                              },
+                              child: Container(
+                                height: 7.h,
+                                width: 100.w,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5.w),
+                                    gradient: const LinearGradient(
+                                      colors: [
+                                        Color(0xfffafafa),
+                                        Color(0xffffa4a2)
+                                      ],
+                                      begin: Alignment.bottomLeft,
+                                      end: Alignment.topRight,
+                                    )),
+                                child: Center(
+                                  child: Text(
+                                    "Hesap Oluştur",
+                                    style: TextStyle(
+                                        color: const Color(0xffe53935),
+                                        fontSize: 2.7.h,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 1),
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

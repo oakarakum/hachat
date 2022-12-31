@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
+import 'package:hachat/app/bindings/home_binding.dart';
 import 'package:hachat/app/bindings/login_binding.dart';
 import 'package:hachat/app/bindings/register_binding.dart';
 import 'package:hachat/app/bindings/splash_binding.dart';
+import 'package:hachat/app/ui/pages/home_page.dart';
 import 'package:hachat/app/ui/pages/login_page.dart';
 import 'package:hachat/app/ui/pages/register_page.dart';
 import 'package:hachat/app/ui/pages/splash_page.dart';
@@ -26,6 +28,11 @@ class AppPages {
       name: Routes.REGISTER,
       page: () => RegisterPage(),
       binding: RegisterBinding()
+    ),
+    GetPage(
+      name: Routes.HOME,
+      page: () => HomePage(),
+      binding: HomeBinding()
     ),
   ];
 }

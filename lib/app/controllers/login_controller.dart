@@ -1,15 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../routes/app_pages.dart';
 
 class LoginController extends GetxController {
-var isPasswordHidden = true.obs;
+  var isPasswordHidden = true.obs;
   String email = "";
   String password = "";
 
-  
+  void goHomepage() {
+    Get.toNamed(Routes.HOME);
+  }
+
   void pageChanger() {
     // Get.to(() => RegisterScreen());
     Get.toNamed(Routes.REGISTER);
@@ -27,4 +29,3 @@ var isPasswordHidden = true.obs;
     }
   }
 }
-  

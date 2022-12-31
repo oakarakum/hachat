@@ -199,7 +199,7 @@ class LoginPage extends GetView<LoginController> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          
+                          controller.goHomepage();
                         },
                         child: Container(
                           height: 7.h,
