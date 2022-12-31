@@ -37,8 +37,7 @@ class FoodlistController extends GetxController {
       child: Icon(Icons.bus_alert, size: 3.5.h, color: const Color(0xff4a148c))),
     SizedBox(
         height: 3.5.h,
-        child: Image.asset("assets/icons8-school-cafeteria-50.png",
-            color: const Color(0xff4a148c)))
+        child: Image.asset("assets/icons8-school-cafeteria-50.png",color: const Color(0xff4a148c)))
   ].obs;
   void changeTabsIndex(int index) {
     tabIndex = index.obs;

@@ -69,28 +69,29 @@ class HomePage extends GetView<HomeController> {
                 //child: Image.asset("assets/2202_w037_n003_224b_p1_224.jpg"))
               ),
               //Text("Hoş Geldiniz",style: TextStyle(color: Color(0xff4a148c),fontWeight: FontWeight.w400,fontSize: 3.h)),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 1.5.h),
-                child: GestureDetector(
-                  onTap: () {
-                  },
-                  child: ListTile(
-                    leading: Icon(Icons.calculate,
-                        size: 3.5.h, color: const Color(0xff4a148c)),
-                    title: Text(
-                      "Ortalama Hesaplama",
-                      style: TextStyle(
-                          color: Color(0xff4a148c),
-                          fontWeight: FontWeight.w500,
-                          fontSize: 3.h),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios,
-                      color: Color(0xff4a148c),
-                    ),
+              ListTile(
+                onLongPress: () {},
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(width: 5.w, color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5.w)),
+                leading: Icon(Icons.calculate,
+                    size: 3.5.h, color: const Color(0xff4a148c)),
+                title: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 4.w),
+                  child: Text(
+                    "GPA Hesaplama",
+                    style: TextStyle(
+                        color: Color(0xff4a148c),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 3.h),
                   ),
                 ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Color(0xff4a148c),
+                ),
               ),
+              
             ],
           ),
         ));
