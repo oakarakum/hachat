@@ -19,23 +19,21 @@ class HomeController extends GetxController {
       size: 3.5.h,
       color: const Color(0xff4a148c),
     ),
-    GestureDetector(
-        onTap: () {},
-        child: Icon(Icons.home, size: 3.5.h, color: const Color(0xff4a148c))),
+    Icon(Icons.home, size: 3.5.h, color: const Color(0xff4a148c)),
     Icon(Icons.bus_alert, size: 3.5.h, color: const Color(0xff4a148c)),
     GestureDetector(
       onTap: () {
         Get.toNamed(Routes.FOOD);
       },
       child: SizedBox(
-        height: 3.5.h,
-        child: Image.asset("assets/icons8-school-cafeteria-50.png", color: const Color(0xff4a148c))),
+          height: 3.5.h,
+          child: Image.asset("assets/icons8-school-cafeteria-50.png",
+              color: const Color(0xff4a148c))),
     )
     //Icon(Icons.calculate, size: 3.5.h, color: const Color(0xff4a148c)),
   ].obs;
   void changeTabsIndex(int index) {
     tabIndex = index.obs;
     update();
-
   }
 }
