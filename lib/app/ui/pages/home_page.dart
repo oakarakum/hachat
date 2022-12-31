@@ -21,9 +21,9 @@ class HomePage extends GetView<HomeController> {
         bottomNavigationBar: CurvedNavigationBar(
           height: 57,
           items: controller.items,
-          index: controller.index.value,
+          index: controller.tabIndex.value,
           onTap: (value) {
-            controller.index.value = value;
+            controller.changeTabsIndex;
           },
           backgroundColor: Color(0xffb2dfdb),
           color: Color(0xffe0f7fa),
@@ -73,19 +73,22 @@ class HomePage extends GetView<HomeController> {
                 padding: EdgeInsets.symmetric(vertical: 1.5.h),
                 child: GestureDetector(
                   onTap: () {
-                    controller.food();
                   },
                   child: ListTile(
-                      leading: Image.asset("assets/icons8-dinner-64.png"),
-                      title: Text(
-                        "Yemekhane",
-                        style: TextStyle(
-                            color: Color(0xff4a148c),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 3.h),
-                      ),
-                      trailing: Icon(Icons.arrow_forward_ios,color: Color(0xff4a148c),),
-                      ),
+                    leading: Icon(Icons.calculate,
+                        size: 3.5.h, color: const Color(0xff4a148c)),
+                    title: Text(
+                      "Ortalama Hesaplama",
+                      style: TextStyle(
+                          color: Color(0xff4a148c),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 3.h),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xff4a148c),
+                    ),
+                  ),
                 ),
               ),
             ],

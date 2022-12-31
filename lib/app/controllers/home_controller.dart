@@ -5,7 +5,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../routes/app_pages.dart';
 
 class HomeController extends GetxController {
-  RxInt index = 2.obs;
+  RxInt tabIndex = 2.obs;
   RxList<Widget> items = [
     GestureDetector(
       onTap: () {
@@ -23,9 +23,19 @@ class HomeController extends GetxController {
         onTap: () {},
         child: Icon(Icons.home, size: 3.5.h, color: const Color(0xff4a148c))),
     Icon(Icons.bus_alert, size: 3.5.h, color: const Color(0xff4a148c)),
-    Icon(Icons.calculate, size: 3.5.h, color: const Color(0xff4a148c)),
+    GestureDetector(
+      onTap: () {
+        Get.toNamed(Routes.FOOD);
+      },
+      child: SizedBox(
+        height: 3.5.h,
+        child: Image.asset("assets/icons8-school-cafeteria-50.png", color: const Color(0xff4a148c))),
+    )
+    //Icon(Icons.calculate, size: 3.5.h, color: const Color(0xff4a148c)),
   ].obs;
-  void food() {
-    Get.toNamed(Routes.FOOD);
+  void changeTabsIndex(int index) {
+    tabIndex = index.obs;
+    update();
+
   }
 }

@@ -4,7 +4,7 @@ import 'package:hachat/app/bindings/home_binding.dart';
 import 'package:hachat/app/bindings/login_binding.dart';
 import 'package:hachat/app/bindings/register_binding.dart';
 import 'package:hachat/app/bindings/splash_binding.dart';
-import 'package:hachat/app/ui/pages/foodlist_page/foodlist_page.dart';
+import 'package:hachat/app/ui/pages/foodlist_page.dart';
 import 'package:hachat/app/ui/pages/home_page.dart';
 import 'package:hachat/app/ui/pages/login_page.dart';
 import 'package:hachat/app/ui/pages/register_page.dart';
