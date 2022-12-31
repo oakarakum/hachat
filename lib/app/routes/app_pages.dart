@@ -11,7 +11,7 @@ import 'package:hachat/app/ui/pages/academic_calendar_page.dart';
 import 'package:hachat/app/ui/pages/foodlist_page.dart';
 import 'package:hachat/app/ui/pages/home_page.dart';
 import 'package:hachat/app/ui/pages/login_page.dart';
-import 'package:hachat/app/ui/pages/maps_pages/maps_page.dart';
+import 'package:hachat/app/ui/pages/maps_page.dart';
 import 'package:hachat/app/ui/pages/register_page.dart';
 import 'package:hachat/app/ui/pages/rings_page.dart';
 import 'package:hachat/app/ui/pages/splash_page.dart';

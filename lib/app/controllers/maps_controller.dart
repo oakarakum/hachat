@@ -6,6 +6,7 @@ import '../routes/app_pages.dart';
 
 class MapsController extends GetxController {
   RxInt tabIndex = 1.obs;
+  var context;
   RxList<Widget> items = [
     GestureDetector(
       onTap: () {
@@ -44,4 +45,21 @@ class MapsController extends GetxController {
     tabIndex = index.obs;
     update();
   }
+  merkezModal(BuildContext context){
+
+  showModalBottomSheet(
+    context: context, 
+    isDismissible: true,
+    isScrollControlled: true,
+    shape: RoundedRectangleBorder(),
+    builder: (context) => Container(
+      height: 100,
+      width: 100,
+      color: Colors.white,
+      child: Text("harita gelecek"),
+    )
+    )   ;
+
+    
+}
 }

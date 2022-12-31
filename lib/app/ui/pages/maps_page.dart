@@ -4,7 +4,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../controllers/maps_controller.dart';
+import '../../controllers/maps_controller.dart';
 
 class MapsPage extends GetView<MapsController> {
   const MapsPage({super.key});
@@ -36,20 +36,18 @@ class MapsPage extends GetView<MapsController> {
               Color(0xffb2dfdb),
             ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
             child: Column(
-              
               children: [
-               
                 Column(
                   children: [
-                     SizedBox(
-                      height: 33.h,
-                      width: 100.w,
+                    SizedBox(
+                        height: 33.h,
+                        width: 100.w,
                         child: Image.asset(
-                      "assets/hacettepe-universitesi-sıhhiye-kampusu.jpg",
-                      fit: BoxFit.fill,
-                    )),
+                          "assets/hacettepe-universitesi-sıhhiye-kampusu.jpg",
+                          fit: BoxFit.fill,
+                        )),
                     Padding(
-                  padding: EdgeInsets.only(left: 5.w,right: 5.w,top: 2.h),
+                      padding: EdgeInsets.only(left: 5.w, right: 5.w, top: 2.h),
                       child: Container(
                         height: 7.5.h,
                         width: 100.w,
@@ -62,7 +60,10 @@ class MapsPage extends GetView<MapsController> {
                         ),
                         child: Center(
                             child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            //controller.merkezModal();
+                            controller.merkezModal(context);
+                          },
                           child: Text(
                             "Merkez Kampüsü",
                             style: TextStyle(
@@ -76,18 +77,19 @@ class MapsPage extends GetView<MapsController> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 2.h),
                       child: SizedBox(
-                height: 33.h,
-                        width: 100.w,
-                child: Image.asset("assets/beytepe_camps.jpg",                        fit: BoxFit.fill,
-)),
+                          height: 33.h,
+                          width: 100.w,
+                          child: Image.asset(
+                            "assets/beytepe_camps.jpg",
+                            fit: BoxFit.fill,
+                          )),
                     ),
-
                     Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5.w),
+                      padding: EdgeInsets.symmetric(horizontal: 5.w),
                       child: GestureDetector(
                         onTap: () {},
                         child: Container(
-                        height: 7.5.h,
+                          height: 7.5.h,
                           width: 100.w,
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
@@ -107,11 +109,12 @@ class MapsPage extends GetView<MapsController> {
                         ),
                       ),
                     ),
-                    
                   ],
                 ),
-                
               ],
-            )));
+            ))
+            
+            );
+            
   }
 }
