@@ -9,6 +9,7 @@ abstract class Routes {
   static const SPLASH = '/splash';
   static const HOME = '/home';
   static const FOOD = '/food';
-
-
+  static const ACADEMIC = '/academic';
+  static const MAPS = '/maps';
+  static const RINGS = '/rings';
 }
