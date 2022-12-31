@@ -219,7 +219,7 @@ class RegisterPage extends GetView<RegisterController> {
                                   AutovalidateMode.onUserInteraction,
                               validator: (value) {
                                 if (value!.length < 2) {
-                                  return "İsim iki harften kısa olamaz";
+                                  return "Soyad iki harften kısa olamaz";
                                 } else if (value.isEmpty) {
                                   return "Alan boş bırakılamaz.";
                                 } else {
@@ -238,7 +238,7 @@ class RegisterPage extends GetView<RegisterController> {
                                   Icons.account_circle,
                                   color: Color(0xff000a12),
                                 ),
-                                hintText: "Soyisim",
+                                hintText: "Soyad",
                                 hintStyle: const TextStyle(
                                     color: Color(0xffe53935),
                                     letterSpacing: 1.3,
@@ -254,13 +254,50 @@ class RegisterPage extends GetView<RegisterController> {
                               ),
                             ),
                           ),
-                          //--------------Okul No------------------
+                          //--------------BABA Adı------------------//
+                          TextFormField(
+                            style: const TextStyle(color: Color(0xff263238)),
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
+                            validator: (value) {
+                              if (value!.length < 2) {
+                                return "İsim iki harften kısa olamaz";
+                              } else if (value.isEmpty) {
+                                return "Alan boş bırakılamaz.";
+                              } else {
+                                return null;
+                              }
+                            },
+                            textAlignVertical: TextAlignVertical.center,
+                            inputFormatters: [
+                              LengthLimitingTextInputFormatter(15),
+                              FilteringTextInputFormatter(RegExp("[a-zA-Z]"),
+                                  allow: true),
+                            ],
+                            decoration: InputDecoration(
+                              isDense: true,
+                              prefixIcon: const Icon(
+                                Icons.account_circle,
+                                color: Color(0xff000a12),
+                              ),
+                              hintText: "Baba Adı",
+                              hintStyle: const TextStyle(
+                                  color: Color(0xffe53935),
+                                  letterSpacing: 1.3,
+                                  fontWeight: FontWeight.w500),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: const Color(0xff000a12),
+                                      width: 0.2.w)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: const Color(0xff000a12),
+                                      width: 0.2.w)),
+                            ),
+                          ),
+                          //--------------Okul No------------------//
                           Padding(
-                            padding: EdgeInsets.only(
-                                bottom:
-                                    MediaQuery.of(context).viewInsets.top < 0
-                                        ? 20.h
-                                        : 0),
+                            padding: EdgeInsets.only(top: 2.h,bottom: 1.1.h),
                             child: TextFormField(
                               style: const TextStyle(color: Color(0xff263238)),
                               autovalidateMode:
@@ -277,6 +314,7 @@ class RegisterPage extends GetView<RegisterController> {
                                 }
                               },
                               textAlignVertical: TextAlignVertical.center,
+                              keyboardType: TextInputType.number,
                               inputFormatters: [
                                 FilteringTextInputFormatter.digitsOnly
                               ],
@@ -304,7 +342,7 @@ class RegisterPage extends GetView<RegisterController> {
                           ),
 
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: 2.h),
+                            padding: EdgeInsets.symmetric(vertical: 1.7.h),
                             child: GestureDetector(
                         onTap: () {
                           controller.dialog();
