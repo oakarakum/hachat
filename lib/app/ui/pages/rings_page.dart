@@ -12,7 +12,7 @@ class RingsPage extends GetView<RingsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff90a4ae),
+        backgroundColor: Color(0xff000000),
         appBar: AppBar(
           toolbarHeight: 0,
           backgroundColor: Color(0xffffccbc),
@@ -24,7 +24,7 @@ class RingsPage extends GetView<RingsController> {
           onTap: (value) {
             controller.changeTabsIndex;
           },
-          backgroundColor: const Color(0xff90a4ae),
+          backgroundColor: const Color(0xff000000),
           color: const Color(0xffe0f7fa),
         ),
         body: SingleChildScrollView(
@@ -43,14 +43,14 @@ class RingsPage extends GetView<RingsController> {
                       children: [
                         Text("GÜZERGAH ADI",
                             style: TextStyle(
-                                color: Color(0xfff5f5f5),
+                                color: Color(0xffffee58),
                                 fontSize: 2.h,
                                 fontWeight: FontWeight.w400)),
                         Padding(
                           padding: EdgeInsets.only(left: 2.w),
                           child: Text("HAREKET SAATİ",
                               style: TextStyle(
-                                  color: Color(0xfff5f5f5),
+                                  color: Color(0xfffff59d),
                                   fontSize: 2.h,
                                   fontWeight: FontWeight.w400)),
                         ),
@@ -82,14 +82,14 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("AYRANCI - HOŞDERE CAD. ORAN SİTESİ",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Padding(
                       padding: EdgeInsets.only(left: 6.w),
                       child: Text("08:00 | 16:00",
                           style: TextStyle(
-                              color: Color(0xffb2ebf2),
+                              color: Color(0xff42a5f5),
                               fontSize: 1.8.h,
                               fontWeight: FontWeight.w400)),
                     ),
@@ -104,12 +104,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("BAHÇELİ - EMEK",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -123,12 +123,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("BATIKENT-1",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -142,12 +142,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("BATIKENT-2/ÇAKIRLAR",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -161,12 +161,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("DİKMEN",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -180,12 +180,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("ERYAMAN - 1",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("07:55 | 15:40",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -199,12 +199,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("ERYAMAN - 2",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -218,12 +218,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("ETLİK",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -237,12 +237,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("ELVANKENT - ETİMESGUT-BAĞLICA",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -256,12 +256,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("GÖLBAŞI - 1",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -275,12 +275,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("GÖLBAŞI-2/TOKİ",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -294,12 +294,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("KEÇİÖREN - 1 ",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
@@ -313,12 +313,12 @@ class RingsPage extends GetView<RingsController> {
                   children: [
                     Text("KEÇİÖREN - 2 ",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.7.h,
                             fontWeight: FontWeight.w400)),
                     Text("08:10 | 16:00",
                         style: TextStyle(
-                            color: Color(0xffb2ebf2),
+                            color: Color(0xff42a5f5),
                             fontSize: 1.8.h,
                             fontWeight: FontWeight.w400)),
                   ],
