@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -53,14 +55,21 @@ class FoodlistController extends GetxController {
         enableDrag: true,
         elevation: 1,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))
+            ),
         builder: (context) => Container(
-              decoration: const BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                Color(0xffe1bee7),
-                Color(0xffd1c4e9),
-                Color(0xffd7ccc8),
-              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+              decoration:  BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                    Color(0xffe1bee7),
+                    Color(0xffd1c4e9),
+                    Color(0xffd7ccc8),
+                    ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight),
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))
+                      
+                      ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -68,7 +77,7 @@ class FoodlistController extends GetxController {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 1.w, top: 1.h),
+                        padding: EdgeInsets.only(left: 1.5.w, top: 1.h),
                         child: Text(
                           "Detaylar:",
                           style: TextStyle(
@@ -80,7 +89,7 @@ class FoodlistController extends GetxController {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
+                    padding: EdgeInsets.only(left: 3.5.w, top: 1.5.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -100,7 +109,7 @@ class FoodlistController extends GetxController {
                   ),
                   Padding(
                     padding:
-                        EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 3.w),
+                        EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 3.5.w),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -119,7 +128,7 @@ class FoodlistController extends GetxController {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 3.w, bottom: 1.h),
+                    padding: EdgeInsets.only(left: 3.5.w, bottom: 1.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -230,13 +239,17 @@ class FoodlistController extends GetxController {
                     ),
                   ),
                   Container(
-                    height: 40.h,
-                    width: 100.w,
-                    child: Image.asset("assets/tabildot_pzt.jpg",fit: BoxFit.fitWidth,))
+                      height: 40.h,
+                      width: 100.w,
+                      child: Image.asset(
+                        "assets/tabildot_pzt.jpg",
+                        fit: BoxFit.fitWidth,
+                      ))
                 ],
               ),
             ));
   }
+
 //1035
   foodSaModal(BuildContext context) {
     showModalBottomSheet(
@@ -261,75 +274,75 @@ class FoodlistController extends GetxController {
                   Column(
                     children: [
                       Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 1.w, top: 1.h),
+                            child: Text(
+                              "Detaylar:",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 3.h),
+                            ),
+                          ),
+                        ],
+                      ),
                       Padding(
-                        padding: EdgeInsets.only(left: 1.w, top: 1.h),
-                        child: Text(
-                          "Detaylar:",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 3.h),
+                        padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Vegan:",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 2.h),
+                            ),
+                            const Icon(
+                              Icons.close,
+                              color: Colors.red,
+                            )
+                          ],
                         ),
                       ),
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Vegan:",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 2.h),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 1.5.h, horizontal: 3.w),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Gluten:",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 2.h),
+                            ),
+                            const Icon(
+                              Icons.check,
+                              color: Colors.green,
+                            )
+                          ],
                         ),
-                        const Icon(
-                          Icons.close,
-                          color: Colors.red,
-                        )
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 3.w),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Gluten:",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 2.h),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 3.w, bottom: 1.h),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Kalori:1385 kcal",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 2.h),
+                            ),
+                            //Icon(Icons.cal,color: Colors.red,)
+                          ],
                         ),
-                        const Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        )
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 3.w, bottom: 1.h),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Kalori:1385 kcal",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 2.h),
-                        ),
-                        //Icon(Icons.cal,color: Colors.red,)
-                      ],
-                    ),
-                  ),
+                      ),
                     ],
                   ),
                   Image.asset("assets/tablot_sali.jpg")
