@@ -10,7 +10,6 @@ class FoodlistController extends GetxController {
     GestureDetector(
       onTap: () {
         Get.toNamed(Routes.ACADEMIC);
-        
       },
       child: Icon(Icons.calendar_month,
           size: 3.5.h, color: const Color(0xff4a148c)),
@@ -31,18 +30,21 @@ class FoodlistController extends GetxController {
         },
         child: Icon(Icons.home, size: 3.5.h, color: const Color(0xff4a148c))),
     GestureDetector(
-      onTap: () {
-        Get.toNamed(Routes.RINGS);
-      },
-      child: Icon(Icons.bus_alert, size: 3.5.h, color: const Color(0xff4a148c))),
+        onTap: () {
+          Get.toNamed(Routes.RINGS);
+        },
+        child:
+            Icon(Icons.bus_alert, size: 3.5.h, color: const Color(0xff4a148c))),
     SizedBox(
         height: 3.5.h,
-        child: Image.asset("assets/icons8-school-cafeteria-50.png",color: const Color(0xff4a148c)))
+        child: Image.asset("assets/icons8-school-cafeteria-50.png",
+            color: const Color(0xff4a148c)))
   ].obs;
   void changeTabsIndex(int index) {
     tabIndex = index.obs;
     update();
   }
+
   foodPzModal(BuildContext context) {
     showModalBottomSheet(
         context: context,
@@ -54,62 +56,85 @@ class FoodlistController extends GetxController {
             borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
         builder: (context) => Container(
               decoration: const BoxDecoration(
-                gradient: LinearGradient(colors: [
-              Color(0xffe1bee7),
-              Color(0xffd1c4e9),
-              Color(0xffd7ccc8),
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+                  gradient: LinearGradient(colors: [
+                Color(0xffe1bee7),
+                Color(0xffd1c4e9),
+                Color(0xffd7ccc8),
+              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "Detaylar:",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 3.h),
+                      Padding(
+                        padding: EdgeInsets.only(left: 1.w, top: 1.h),
+                        child: Text(
+                          "Detaylar:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 3.h),
+                        ),
                       ),
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:1.w),
-                    child: Text(
-                      "Vegan:Hayır",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
+                        padding: EdgeInsets.only(left: 3.w,top: 1.5.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Vegan:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+const Icon(Icons.close,color: Colors.red,)
+                      ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:1.w),
-                    child: Text(
-                      "Gluten:Yok",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
+                        padding: EdgeInsets.symmetric(vertical: 1.5.h,horizontal: 3.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Gluten:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+                        const Icon(Icons.close,color: Colors.red,)
+
+                      ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:1.w),
-                    child: Text(
-                      "Kalori:1019",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
+                        padding: EdgeInsets.only(left: 3.w,bottom: 1.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Kalori:1019 kcal",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+                        //Icon(Icons.cal,color: Colors.red,)
+
+                      ],
                     ),
                   ),
-                  Image.asset("assets/beytepe_kroki.jpg")
+                  Image.asset("assets/tablot_paz.jpg")
                 ],
               ),
             ));
-
   }
+
   foodPztModal(BuildContext context) {
     showModalBottomSheet(
         context: context,
@@ -121,11 +146,11 @@ class FoodlistController extends GetxController {
             borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
         builder: (context) => Container(
               decoration: const BoxDecoration(
-                gradient: LinearGradient(colors: [
-              Color(0xffe1bee7),
-              Color(0xffd1c4e9),
-              Color(0xffd7ccc8),
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+                  gradient: LinearGradient(colors: [
+                Color(0xffe1bee7),
+                Color(0xffd1c4e9),
+                Color(0xffd7ccc8),
+              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -142,7 +167,7 @@ class FoodlistController extends GetxController {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:1.w),
+                    padding: EdgeInsets.only(left: 1.w),
                     child: Text(
                       "Vegan:Hayır",
                       style: TextStyle(
@@ -152,7 +177,7 @@ class FoodlistController extends GetxController {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:1.w),
+                    padding: EdgeInsets.only(left: 1.w),
                     child: Text(
                       "Gluten:Var",
                       style: TextStyle(
@@ -162,7 +187,7 @@ class FoodlistController extends GetxController {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:1.w),
+                    padding: EdgeInsets.only(left: 1.w),
                     child: Text(
                       "Kalori:1385",
                       style: TextStyle(
@@ -175,8 +200,8 @@ class FoodlistController extends GetxController {
                 ],
               ),
             ));
-
   }
+
   foodSaModal(BuildContext context) {
     showModalBottomSheet(
         context: context,
@@ -188,60 +213,62 @@ class FoodlistController extends GetxController {
             borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
         builder: (context) => Container(
               decoration: const BoxDecoration(
-                gradient: LinearGradient(colors: [
-              Color(0xffe1bee7),
-              Color(0xffd1c4e9),
-              Color(0xffd7ccc8),
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+                  gradient: LinearGradient(colors: [
+                Color(0xffe1bee7),
+                Color(0xffd1c4e9),
+                Color(0xffd7ccc8),
+              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  Column(
                     children: [
-                      Text(
-                        "Detaylar:",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 3.h),
+                      Padding(
+                        padding: EdgeInsets.only(left: 2.w, top: 5.h),
+                        child: Text(
+                          "Detaylar:",
+                          style: TextStyle(
+                              color: Colors.pink,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 3.h),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 2.w, top: 1.h),
+                        child: Text(
+                          "Vegan:Hayır",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 2.w, top: 1.h),
+                        child: Text(
+                          "Gluten:Var",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 1.w),
+                        child: Text(
+                          "Kalori:1385",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left:1.w),
-                    child: Text(
-                      "Vegan:Hayır",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left:1.w),
-                    child: Text(
-                      "Gluten:Var",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left:1.w),
-                    child: Text(
-                      "Kalori:1385",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
-                    ),
-                  ),
-                  Image.asset("assets/tablot_paz.jpg")
+                  Image.asset("assets/tablot_sali.jpg")
                 ],
               ),
             ));
-
   }
 }
