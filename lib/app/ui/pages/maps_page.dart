@@ -53,7 +53,10 @@ class MapsPage extends GetView<MapsController> {
                         width: 100.w,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                              colors: [Color(0xff4fc3f7), Color(0xff82e9de)],
+                              colors: [
+                                Color(0xff4fc3f7),
+                                Color(0xff82e9de),
+                              ],
                               begin: Alignment.centerLeft,
                               end: Alignment.centerRight),
                           borderRadius: BorderRadius.circular(3.w),
@@ -112,9 +115,6 @@ class MapsPage extends GetView<MapsController> {
                   ],
                 ),
               ],
-            ))
-            
-            );
-            
+            )));
   }
 }

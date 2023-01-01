@@ -51,15 +51,42 @@ class MapsController extends GetxController {
     context: context, 
     isDismissible: true,
     isScrollControlled: true,
-    shape: RoundedRectangleBorder(),
+    enableDrag: true,
+    elevation: 1,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(5.w)
+      )
+    ),
     builder: (context) => Container(
-      height: 100,
-      width: 100,
-      color: Colors.white,
-      child: Text("harita gelecek"),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(colors: [
+              Color(0xff4fc3f7),
+                                Color(0xff82e9de),
+            ], begin: Alignment.topLeft, end: Alignment.topRight),
+         borderRadius: BorderRadius.vertical(
+        top: Radius.circular(5.w)
+      )
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        //mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Sıhhiye Kampüs Haritası",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 3.h),),
+          Image.asset("assets/merkez kroki.jpg")
+        ],
+      ),
     )
+    /* Container(
+      height: 60.h,
+      width: 100.w,
+      decoration:  BoxDecoration(
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(5.w),topRight: Radius.circular(5.w)),
+        image: DecorationImage(image: AssetImage("assets/merkez kroki.jpg"))),
+    
+    ) */
     )   ;
 
-    
+      //"assets/merkez kroki.jpg"
 }
 }
