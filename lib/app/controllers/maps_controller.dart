@@ -115,6 +115,5 @@ class MapsController extends GetxController {
               ),
             ));
 
-    //"assets/merkez kroki.jpg"
   }
 }

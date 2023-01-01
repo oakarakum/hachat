@@ -43,4 +43,205 @@ class FoodlistController extends GetxController {
     tabIndex = index.obs;
     update();
   }
+  foodPzModal(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        isDismissible: true,
+        isScrollControlled: true,
+        enableDrag: true,
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
+        builder: (context) => Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(colors: [
+              Color(0xffe1bee7),
+              Color(0xffd1c4e9),
+              Color(0xffd7ccc8),
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Detaylar:",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 3.h),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Vegan:Hayır",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Gluten:Yok",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Kalori:1019",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Image.asset("assets/beytepe_kroki.jpg")
+                ],
+              ),
+            ));
+
+  }
+  foodPztModal(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        isDismissible: true,
+        isScrollControlled: true,
+        enableDrag: true,
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
+        builder: (context) => Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(colors: [
+              Color(0xffe1bee7),
+              Color(0xffd1c4e9),
+              Color(0xffd7ccc8),
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Detaylar:",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 3.h),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Vegan:Hayır",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Gluten:Var",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Kalori:1385",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Image.asset("assets/tabildot_pzt.jpg")
+                ],
+              ),
+            ));
+
+  }
+  foodSaModal(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        isDismissible: true,
+        isScrollControlled: true,
+        enableDrag: true,
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
+        builder: (context) => Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(colors: [
+              Color(0xffe1bee7),
+              Color(0xffd1c4e9),
+              Color(0xffd7ccc8),
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Detaylar:",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 3.h),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Vegan:Hayır",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Gluten:Var",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left:1.w),
+                    child: Text(
+                      "Kalori:1385",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 2.h),
+                    ),
+                  ),
+                  Image.asset("assets/tablot_paz.jpg")
+                ],
+              ),
+            ));
+
+  }
 }
