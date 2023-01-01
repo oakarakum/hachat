@@ -39,9 +39,9 @@ class GpaCalcPage extends GetView<GpaCalcController> {
               ), */
               Container(
                 //beyaz kont
-                height: 44.h,
+                height: 46.h,
                 width: 100.w,
-                margin: EdgeInsets.symmetric(vertical: 2.h),
+                margin: EdgeInsets.symmetric(vertical: 1.5.h),
                 decoration: BoxDecoration(
                     color: Color(0xffFFFFFF),
                     border: Border.all(width: 0.5.w, color: Color(0xff006064))),
@@ -52,7 +52,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(left: 2.w, top: 1.5.h),
-                          child: Text("Sömestır I",
+                          child: Text("I.Sömestır ",
                               style: TextStyle(
                                   color: Color(0xff1a237e),
                                   fontSize: 3.h,
@@ -225,50 +225,94 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                           ),
                         ],
                       ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 2.w,top: 1.h),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text("I. Sömestır GPA: ",
+                            style: TextStyle(
+                                color: Color(0xff125a64),
+                                fontSize: 1.8.h,
+                                fontWeight: FontWeight.w400)),
+                          Text("0.00",
+                            style: TextStyle(
+                                color: Color(0xff1a237e),
+                                fontSize: 1.8.h,
+                                fontWeight: FontWeight.w600))
+                        ],
+                      ),
                     )
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 1.2.h),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 4.h,
-                      width: 30.w,
-                      decoration: BoxDecoration(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 4.h,
+                    width: 30.w,
+                    decoration: BoxDecoration(
+                        color: Color(0xff125a64),
+                        borderRadius: BorderRadius.circular(1.w)),
+                    child: Center(
+                      child: Text(
+                        "Hesapla",
+                        style: TextStyle(
+                            color: Color(0xffFFFFFF),
+                            fontSize: 1.5.h,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 4.h,
+                    width: 30.w,
+                    margin: EdgeInsets.only(left: 5.w),
+                    decoration: BoxDecoration(
+                        color: Color(0xff1a237e),
+                        borderRadius: BorderRadius.circular(1.w)),
+                    child: Center(
+                      child: Text(
+                        "Sömestır Ekle",
+                        style: TextStyle(
+                            color: Color(0xffFFFFFF),
+                            fontSize: 1.5.h,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                height: 7.h,
+                width: 100.w,
+                margin: EdgeInsets.only(top: 1.5.h),
+                decoration: BoxDecoration(
                           color: Color(0xff125a64),
                           borderRadius: BorderRadius.circular(1.w)),
-                      child: Center(
-                        child: Text(
-                          "Ders Ekle",
+                          child: Center(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text("Ortalama GPA",
                           style: TextStyle(
                               color: Color(0xffFFFFFF),
-                              fontSize: 1.5.h,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: 4.h,
-                      width: 30.w,
-                      margin: EdgeInsets.only(left: 5.w),
-                      decoration: BoxDecoration(
-                          color: Color(0xff1a237e),
-                          borderRadius: BorderRadius.circular(1.w)),
-                      child: Center(
-                        child: Text(
-                          "Sömestır Ekle",
+                              fontSize: 2.h,
+                              fontWeight: FontWeight.w700)),
+                                  Text("0.00",
                           style: TextStyle(
                               color: Color(0xffFFFFFF),
-                              fontSize: 1.5.h,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                              fontSize: 2.h,
+                              fontWeight: FontWeight.w700)),
+
+                                ],
+                              ),
+                            ),
+                          ),
               )
             ],
           ),
