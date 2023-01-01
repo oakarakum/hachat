@@ -80,7 +80,7 @@ class FoodlistController extends GetxController {
                     ],
                   ),
                   Padding(
-                        padding: EdgeInsets.only(left: 3.w,top: 1.5.h),
+                    padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -91,12 +91,16 @@ class FoodlistController extends GetxController {
                               fontWeight: FontWeight.w600,
                               fontSize: 2.h),
                         ),
-const Icon(Icons.close,color: Colors.red,)
+                        const Icon(
+                          Icons.close,
+                          color: Colors.red,
+                        )
                       ],
                     ),
                   ),
                   Padding(
-                        padding: EdgeInsets.symmetric(vertical: 1.5.h,horizontal: 3.w),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 3.w),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -107,13 +111,15 @@ const Icon(Icons.close,color: Colors.red,)
                               fontWeight: FontWeight.w600,
                               fontSize: 2.h),
                         ),
-                        const Icon(Icons.close,color: Colors.red,)
-
+                        const Icon(
+                          Icons.close,
+                          color: Colors.red,
+                        )
                       ],
                     ),
                   ),
                   Padding(
-                        padding: EdgeInsets.only(left: 3.w,bottom: 1.h),
+                    padding: EdgeInsets.only(left: 3.w, bottom: 1.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -125,7 +131,6 @@ const Icon(Icons.close,color: Colors.red,)
                               fontSize: 2.h),
                         ),
                         //Icon(Icons.cal,color: Colors.red,)
-
                       ],
                     ),
                   ),
@@ -157,51 +162,82 @@ const Icon(Icons.close,color: Colors.red,)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "Detaylar:",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 3.h),
+                      Padding(
+                        padding: EdgeInsets.only(left: 1.w, top: 1.h),
+                        child: Text(
+                          "Detaylar:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 3.h),
+                        ),
                       ),
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 1.w),
-                    child: Text(
-                      "Vegan:Hayır",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
+                    padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Vegan:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+                        const Icon(
+                          Icons.close,
+                          color: Colors.red,
+                        )
+                      ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 1.w),
-                    child: Text(
-                      "Gluten:Var",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 3.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Gluten:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+                        const Icon(
+                          Icons.check,
+                          color: Colors.green,
+                        )
+                      ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 1.w),
-                    child: Text(
-                      "Kalori:1385",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 2.h),
+                    padding: EdgeInsets.only(left: 3.w, bottom: 1.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Kalori:1385 kcal",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 2.h),
+                        ),
+                        //Icon(Icons.cal,color: Colors.red,)
+                      ],
                     ),
                   ),
-                  Image.asset("assets/tabildot_pzt.jpg")
+                  Container(
+                    height: 40.h,
+                    width: 100.w,
+                    child: Image.asset("assets/tabildot_pzt.jpg",fit: BoxFit.fitWidth,))
                 ],
               ),
             ));
   }
-
+//1035
   foodSaModal(BuildContext context) {
     showModalBottomSheet(
         context: context,
@@ -224,46 +260,76 @@ const Icon(Icons.close,color: Colors.red,)
                 children: [
                   Column(
                     children: [
+                      Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 2.w, top: 5.h),
+                        padding: EdgeInsets.only(left: 1.w, top: 1.h),
                         child: Text(
                           "Detaylar:",
                           style: TextStyle(
-                              color: Colors.pink,
+                              color: Colors.white,
                               fontWeight: FontWeight.w600,
                               fontSize: 3.h),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 2.w, top: 1.h),
-                        child: Text(
-                          "Vegan:Hayır",
+                    ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Vegan:",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
                               fontSize: 2.h),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 2.w, top: 1.h),
-                        child: Text(
-                          "Gluten:Var",
+                        const Icon(
+                          Icons.close,
+                          color: Colors.red,
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 3.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Gluten:",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
                               fontSize: 2.h),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 1.w),
-                        child: Text(
-                          "Kalori:1385",
+                        const Icon(
+                          Icons.check,
+                          color: Colors.green,
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 3.w, bottom: 1.h),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Kalori:1385 kcal",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
                               fontSize: 2.h),
                         ),
-                      ),
+                        //Icon(Icons.cal,color: Colors.red,)
+                      ],
+                    ),
+                  ),
                     ],
                   ),
                   Image.asset("assets/tablot_sali.jpg")
