@@ -8,20 +8,21 @@ import '../../controllers/gpacalc_controller.dart';
 
 class GpaCalcPage extends GetView<GpaCalcController> {
   const GpaCalcPage({super.key});
-//koyu yeşiş 125a64
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 178, 213, 210),
         appBar: AppBar(
-          toolbarHeight: 0,
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 178, 213, 210),
+          centerTitle: true,
+          title: Text("GPA Calculator"),
+          elevation: .5.w,
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 5.w),
           child: Column(
             children: [
-              Padding(
+              /* Padding(
                 padding: EdgeInsets.only(top: 5.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -35,7 +36,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                     ),
                   ],
                 ),
-              ),
+              ), */
               Container(
                 //beyaz kont
                 height: 44.h,
@@ -237,37 +238,35 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                       height: 4.h,
                       width: 30.w,
                       decoration: BoxDecoration(
-                        color: Color(0xff125a64),
+                          color: Color(0xff125a64),
                           borderRadius: BorderRadius.circular(1.w)),
-                          child: Center(
-                            child: Text(
-                        "Ders Ekle",
-                        style: TextStyle(
+                      child: Center(
+                        child: Text(
+                          "Ders Ekle",
+                          style: TextStyle(
                               color: Color(0xffFFFFFF),
                               fontSize: 1.5.h,
                               fontWeight: FontWeight.w600),
+                        ),
                       ),
-                          ),
                     ),
                     Container(
                       height: 4.h,
                       width: 30.w,
                       margin: EdgeInsets.only(left: 5.w),
                       decoration: BoxDecoration(
-                        color: Color(0xff1a237e),
+                          color: Color(0xff1a237e),
                           borderRadius: BorderRadius.circular(1.w)),
-                          child: Center(
-                            child: Text(
-                        "Sömestır Ekle",
-                        style: TextStyle(
+                      child: Center(
+                        child: Text(
+                          "Sömestır Ekle",
+                          style: TextStyle(
                               color: Color(0xffFFFFFF),
                               fontSize: 1.5.h,
                               fontWeight: FontWeight.w600),
+                        ),
                       ),
-                          ),
                     ),
-                    
-                    
                   ],
                 ),
               )
