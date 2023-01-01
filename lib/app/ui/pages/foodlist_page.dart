@@ -28,7 +28,7 @@ class FoodlistPage extends GetView<FoodlistController> {
         ),
         body: SingleChildScrollView(
           child: Container(
-              height: 100.h,
+              height: 119.h,
               width: 100.w,
               decoration: const BoxDecoration(
                   gradient: LinearGradient(colors: [
@@ -88,11 +88,24 @@ class FoodlistPage extends GetView<FoodlistController> {
                             ],
                           ),
                         ),
-                        Text("Beytepe",
-                            style: TextStyle(
-                                color: Color(0xff6200ea),
-                                fontSize: 2.5.h,
-                                fontWeight: FontWeight.w500)),
+                        SizedBox(
+                          height: 18.h,
+                          width: 100.w,
+                          child: Image.asset(
+                            "assets/dining_hall4.jpg",
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ), //assets\food_cafe.jpg
+
+                        //---------------BEYTEPE---------------//
+                        Padding(
+                          padding: EdgeInsets.only(top: 1.h),
+                          child: Text("Beytepe",
+                              style: TextStyle(
+                                  color: Color(0xff6200ea),
+                                  fontSize: 2.5.h,
+                                  fontWeight: FontWeight.w500)),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(top: 1.h),
                           child: Text("Sabah:   08:00 - 09:15",
@@ -109,7 +122,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                                   fontSize: 1.7.h,
                                   fontWeight: FontWeight.w400)),
                         ),
-        
+
                         ///
                         Padding(
                           padding: EdgeInsets.only(top: 1.h),
@@ -121,7 +134,8 @@ class FoodlistPage extends GetView<FoodlistController> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 13.w),
-                          child: Text("(Hafta Sonu - Resmi Tatil 09:00 - 10:00)",
+                          child: Text(
+                              "(Hafta Sonu - Resmi Tatil 09:00 - 10:00)",
                               style: TextStyle(
                                   color: Color(0xff6200ea),
                                   fontSize: 1.7.h,
@@ -135,15 +149,15 @@ class FoodlistPage extends GetView<FoodlistController> {
                                   fontSize: 1.7.h,
                                   fontWeight: FontWeight.w400)),
                         ),
-                         //---------------SIHHIYE---------------//       
-                                Padding(
-                                  padding:  EdgeInsets.symmetric(vertical: 1.h),
-                                  child: Text("Sıhhiye",
-                            style: TextStyle(
+                        //---------------SIHHIYE---------------//
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 1.h),
+                          child: Text("Sıhhiye",
+                              style: TextStyle(
                                   color: Color(0xff6200ea),
                                   fontSize: 2.5.h,
                                   fontWeight: FontWeight.w500)),
-                                ),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(top: 1.h),
                           child: Text("Sabah:   08:00 - 09:00",
@@ -160,7 +174,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                                   fontSize: 1.7.h,
                                   fontWeight: FontWeight.w400)),
                         ),
-        
+
                         ///
                         Padding(
                           padding: EdgeInsets.only(top: 1.h),
@@ -172,7 +186,8 @@ class FoodlistPage extends GetView<FoodlistController> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 13.w),
-                          child: Text("(Hafta Sonu - Resmi Tatil 09:00 - 10:00)",
+                          child: Text(
+                              "(Hafta Sonu - Resmi Tatil 09:00 - 10:00)",
                               style: TextStyle(
                                   color: Color(0xff6200ea),
                                   fontSize: 1.7.h,
