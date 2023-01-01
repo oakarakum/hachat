@@ -68,7 +68,10 @@ class HomePage extends GetView<HomeController> {
                         fit: BoxFit.cover)),
                 //child: Image.asset("assets/2202_w037_n003_224b_p1_224.jpg"))
               ),
-              //Text("Hoş Geldiniz",style: TextStyle(color: Color(0xff4a148c),fontWeight: FontWeight.w400,fontSize: 3.h)),
+              Padding(
+                padding:  EdgeInsets.only(top: 2.h),
+                child: Text("Hoş Geldiniz",style: TextStyle(color: Color(0xff4a148c),fontWeight: FontWeight.w400,fontSize: 3.h)),
+              ),
               ListTile(
                 onLongPress: () {},
                 shape: RoundedRectangleBorder(
@@ -78,12 +81,17 @@ class HomePage extends GetView<HomeController> {
                     size: 3.5.h, color: const Color(0xff4a148c)),
                 title: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 4.w),
-                  child: Text(
-                    "GPA Hesaplama",
-                    style: TextStyle(
-                        color: Color(0xff4a148c),
-                        fontWeight: FontWeight.w500,
-                        fontSize: 3.h),
+                  child: GestureDetector(
+                    onTap: () {
+                      controller.gpaPage();
+                    },
+                    child: Text(
+                      "GPA Hesaplama",
+                      style: TextStyle(
+                          color: Color(0xff4a148c),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 3.h),
+                    ),
                   ),
                 ),
                 trailing: Icon(

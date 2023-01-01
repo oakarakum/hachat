@@ -44,4 +44,7 @@ class HomeController extends GetxController {
     tabIndex = index.obs;
     update();
   }
+  gpaPage(){
+    Get.toNamed(Routes.GPA);
+  }
 }

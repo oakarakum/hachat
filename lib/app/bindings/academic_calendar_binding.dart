@@ -7,5 +7,6 @@ class AcademicBinding implements Bindings {
   @override
   void dependencies() {
     Get.put(AcademicCalendarController());
+    
   }
 }

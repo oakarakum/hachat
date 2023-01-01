@@ -25,6 +25,7 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
           color: const Color(0xffe0f7fa),
         ),
         body: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
           child: Container(
             height: 100.h,
             width: 100.w,

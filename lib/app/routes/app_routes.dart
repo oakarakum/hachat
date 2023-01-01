@@ -12,4 +12,6 @@ abstract class Routes {
   static const ACADEMIC = '/academic';
   static const MAPS = '/maps';
   static const RINGS = '/rings';
+  static const GPA = '/gpa';
+
 }
