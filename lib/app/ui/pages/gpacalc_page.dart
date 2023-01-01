@@ -100,84 +100,90 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                       child: ListView.builder(
                         itemCount: 6,
                         itemBuilder: (context, index) {
-                        return Padding(//
-                      padding: EdgeInsets.only(left: 2.w, top: 1.5,bottom: 1.5.h),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            //ders field
-                            height: 3.5.h,
-                            width: 28.w,
-                            child: TextFormField(
-                              textAlignVertical: TextAlignVertical.center,
-                              decoration: InputDecoration(
-                                  filled: true,
-                                  fillColor: Color.fromARGB(255, 178, 213, 210),
-                                  hintText: "Ör. Matematik",
-                                  hintStyle: TextStyle(
-                                      color: Color(0xff125a64),
-                                      fontSize: 1.5.h,
-                                      fontWeight: FontWeight.w300)),
-                            ),
-                          ),
-                          Padding(
-                            //harf notu
-                            padding: EdgeInsets.only(left: 3.w),
-                            child: SizedBox(
-                              height: 3.5.h,
-                              width: 21.w,
-                              child: TextFormField(
-                                textAlignVertical: TextAlignVertical.center,
-                                decoration: InputDecoration(
-                                    filled: true,
-                                    fillColor:
-                                        Color.fromARGB(255, 178, 213, 210),
-                                    hintText: "Ör. A",
-                                    hintStyle: TextStyle(
-                                        color: Color(0xff125a64),
-                                        fontSize: 1.5.h,
-                                        fontWeight: FontWeight.w300)),
-                              ),
-                            ),
-                          ),
-                          //not
-                          Padding(
-                            //harf notu
-                            padding: EdgeInsets.only(left: 6.5.w),
-                            child: SizedBox(
-                              height: 3.5.h,
-                              width: 14.w,
-                              child: TextFormField(
-                                textAlignVertical: TextAlignVertical.center,
-                                decoration: InputDecoration(
-                                    filled: true,
-                                    fillColor:
-                                        Color.fromARGB(255, 178, 213, 210),
-                                    hintText: "Ör 50",
-                                    hintStyle: TextStyle(
-                                        color: Color(0xff125a64),
-                                        fontSize: 1.5.h,
-                                        fontWeight: FontWeight.w300)),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 4.w),
-                            child: SizedBox(
-                              height: 2.h,
-                              width: 5.w,
-                              child: SvgPicture.asset("assets/close.svg")
-                            )
-                            /* Icon(
+                          return Padding(
+                            //
+                            padding: EdgeInsets.only(
+                                left: 2.w, top: 1.5, bottom: 1.5.h),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  //ders field
+                                  height: 3.5.h,
+                                  width: 28.w,
+                                  child: TextFormField(
+                                    textAlignVertical: TextAlignVertical.center,
+                                    decoration: InputDecoration(
+                                        filled: true,
+                                        fillColor:
+                                            Color.fromARGB(255, 178, 213, 210),
+                                        hintText: "Ör. Matematik",
+                                        hintStyle: TextStyle(
+                                            color: Color(0xff125a64),
+                                            fontSize: 1.5.h,
+                                            fontWeight: FontWeight.w300)),
+                                  ),
+                                ),
+                                Padding(
+                                  //harf notu
+                                  padding: EdgeInsets.only(left: 3.w),
+                                  child: SizedBox(
+                                    height: 3.5.h,
+                                    width: 21.w,
+                                    child: TextFormField(
+                                      textAlignVertical:
+                                          TextAlignVertical.center,
+                                      decoration: InputDecoration(
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 178, 213, 210),
+                                          hintText: "Ör. A",
+                                          hintStyle: TextStyle(
+                                              color: Color(0xff125a64),
+                                              fontSize: 1.5.h,
+                                              fontWeight: FontWeight.w300)),
+                                    ),
+                                  ),
+                                ),
+                                //not
+                                Padding(
+                                  //harf notu
+                                  padding: EdgeInsets.only(left: 6.5.w),
+                                  child: SizedBox(
+                                    height: 3.5.h,
+                                    width: 14.w,
+                                    child: TextFormField(
+                                      textAlignVertical:
+                                          TextAlignVertical.center,
+                                      decoration: InputDecoration(
+                                          filled: true,
+                                          fillColor: Color.fromARGB(
+                                              255, 178, 213, 210),
+                                          hintText: "Ör 50",
+                                          hintStyle: TextStyle(
+                                              color: Color(0xff125a64),
+                                              fontSize: 1.5.h,
+                                              fontWeight: FontWeight.w300)),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                    padding: EdgeInsets.only(left: 4.w),
+                                    child: SizedBox(
+                                        height: 2.h,
+                                        width: 5.w,
+                                        child: SvgPicture.asset(
+                                            "assets/close.svg"))
+                                    /* Icon(
                               Icons.close,
                               color: Color(0xff125a64),
                             ), */
-                          )
-                        ],
+                                    )
+                              ],
+                            ),
+                          );
+                        },
                       ),
-                    );
-                      },),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 1.2.h),
@@ -185,32 +191,82 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                                height: 2.h,
-                                width: 5.w,
-                                child: SvgPicture.asset("assets/plus.svg",color: Color(0xff125a64))
-                              ),
-                          Padding(padding: EdgeInsets.only(left: 2.w,right: 5.w),
-                          child: Text("Add Course",style: TextStyle(
-                                          color: Color(0xff125a64),
-                                          fontSize: 2.h,
-                                          fontWeight: FontWeight.w600),),
-                          
+                              height: 2.h,
+                              width: 5.w,
+                              child: SvgPicture.asset("assets/plus.svg",
+                                  color: Color(0xff125a64))),
+                          Padding(
+                            padding: EdgeInsets.only(left: 2.w, right: 5.w),
+                            child: Text(
+                              "Add Course",
+                              style: TextStyle(
+                                  color: Color(0xff125a64),
+                                  fontSize: 2.h,
+                                  fontWeight: FontWeight.w600),
+                            ),
                           ),
                           SizedBox(
-                                height: 2.h,
-                                width: 5.w,
-                                child: SvgPicture.asset("assets/close.svg",color: Colors.red,)
-                              ),
-                              Padding(padding: EdgeInsets.only(left: 2.w,right: 5.w),
-                          child: Text("Clear All",style: TextStyle(
-                                          color: Colors.red,
-                                          fontSize: 2.h,
-                                          fontWeight: FontWeight.w600),),
-                          
+                              height: 2.h,
+                              width: 5.w,
+                              child: SvgPicture.asset(
+                                "assets/close.svg",
+                                color: Colors.red,
+                              )),
+                          Padding(
+                            padding: EdgeInsets.only(left: 2.w, right: 5.w),
+                            child: Text(
+                              "Clear All",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 2.h,
+                                  fontWeight: FontWeight.w600),
+                            ),
                           ),
                         ],
                       ),
                     )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 1.2.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 4.h,
+                      width: 30.w,
+                      decoration: BoxDecoration(
+                        color: Color(0xff125a64),
+                          borderRadius: BorderRadius.circular(1.w)),
+                          child: Center(
+                            child: Text(
+                        "Ders Ekle",
+                        style: TextStyle(
+                              color: Color(0xffFFFFFF),
+                              fontSize: 1.5.h,
+                              fontWeight: FontWeight.w600),
+                      ),
+                          ),
+                    ),
+                    Container(
+                      height: 4.h,
+                      width: 30.w,
+                      margin: EdgeInsets.only(left: 5.w),
+                      decoration: BoxDecoration(
+                        color: Color(0xff1a237e),
+                          borderRadius: BorderRadius.circular(1.w)),
+                          child: Center(
+                            child: Text(
+                        "Sömestır Ekle",
+                        style: TextStyle(
+                              color: Color(0xffFFFFFF),
+                              fontSize: 1.5.h,
+                              fontWeight: FontWeight.w600),
+                      ),
+                          ),
+                    ),
+                    
                     
                   ],
                 ),
