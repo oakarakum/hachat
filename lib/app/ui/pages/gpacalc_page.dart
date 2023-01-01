@@ -38,7 +38,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
               ),
               Container(
                 //beyaz kont
-                height: 40.h,
+                height: 44.h,
                 width: 100.w,
                 margin: EdgeInsets.symmetric(vertical: 2.h),
                 decoration: BoxDecoration(
@@ -95,13 +95,13 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                       ),
                     ),
                     SizedBox(
-                      height: 40.h,
+                      height: 30.h,
                       width: 100.w,
                       child: ListView.builder(
-                        itemCount: 5,
+                        itemCount: 6,
                         itemBuilder: (context, index) {
                         return Padding(//
-                      padding: EdgeInsets.only(left: 2.w, top: 1.5),
+                      padding: EdgeInsets.only(left: 2.w, top: 1.5,bottom: 1.5.h),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -178,7 +178,40 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                       ),
                     );
                       },),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 1.2.h),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                                height: 2.h,
+                                width: 5.w,
+                                child: SvgPicture.asset("assets/plus.svg",color: Color(0xff125a64))
+                              ),
+                          Padding(padding: EdgeInsets.only(left: 2.w,right: 5.w),
+                          child: Text("Add Course",style: TextStyle(
+                                          color: Color(0xff125a64),
+                                          fontSize: 2.h,
+                                          fontWeight: FontWeight.w600),),
+                          
+                          ),
+                          SizedBox(
+                                height: 2.h,
+                                width: 5.w,
+                                child: SvgPicture.asset("assets/close.svg",color: Colors.red,)
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 2.w,right: 5.w),
+                          child: Text("Clear All",style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 2.h,
+                                          fontWeight: FontWeight.w600),),
+                          
+                          ),
+                        ],
+                      ),
                     )
+                    
                   ],
                 ),
               )
