@@ -89,8 +89,10 @@ class MapsPage extends GetView<MapsController> {
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 5.w),
-                      child: GestureDetector(
-                        onTap: () {},
+                      child: GestureDetector(//beytepe  harita butonu
+                        onTap: () {
+                          controller.beyTepeModal(context);
+                        },
                         child: Container(
                           height: 7.5.h,
                           width: 100.w,
