@@ -33,6 +33,7 @@ dependencies:
   flutter_svg: ^1.1.6
   animate_do: ^3.0.2
   curved_navigation_bar: ^1.0.3
+  google_fonts: ^3.0.1
 
 
 dev_dependencies:

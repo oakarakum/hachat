@@ -21,58 +21,66 @@ class SplashPage extends GetView<SplashController> {
         child: Column(
           children: [
             FadeInDownBig(
-              delay: const Duration(milliseconds: 500),
-              child: Container(
-                height: 40.h,
-                width: 100.w,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/hacettepe manzara.jpg"),
-                        fit: BoxFit.cover)),
-              ),
-            ),
-            FadeInDownBig(
-              child: SizedBox(
-                  height: 38.h,
-                  child: SvgPicture.asset(
-                    "assets/Hacettepe_Üniversitesi_Logosu.svg",
-                    height: 35.h,
-                  )),
-            ),
-            SizedBox(
-              height: 1.h,
-            ),
-            FadeInUpBig(
-              child: Text(
-                'Hacettepe Üniversitesi',
-                style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 3.5.h,
-                    color: Colors.black),
-              ),
-            ),
-            SizedBox(
-              height: 2.h,
-            ),
-            FadeInUpBig(
-              delay: const Duration(milliseconds: 500),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              delay: const Duration(milliseconds: 700),
+              child: Stack(
                 children: [
-                  SizedBox(
-                      height: 6.h,
-                      width: 15.w,
-                      child: Image.asset("assets/fiores.jpg")),
-                  Text(
-                    'Coded by FIORES GLOBAL',
+                  Container(
+                    height: 40.h,
+                    width: 100.w,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/hacettepe manzara.jpg"),
+                            fit: BoxFit.cover)),
+                  ),
+                  Positioned(
+                    left: 40.h,
+                    child: SizedBox(
+                        height: 15.h,
+                        child: SvgPicture.asset(
+                          "assets/Hacettepe_Üniversitesi_Logosu.svg",
+                          height: 10.h,
+                        )),
+                  )
+                ],
+              ),
+            ),
+            
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 4.h),
+              child: FadeInLeftBig(
+                delay: Duration(milliseconds: 950),
+                child: Text(
+                  'HACHAT',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 3.2.h,
+                      color: Colors.red),
+                ),
+              ),
+            ),
+            
+            
+                  
+            FadeInUpBig(
+              delay: const Duration(milliseconds: 700),
+              child: 
+               Container(
+                    height: 45.29.h,
+                    width: 100.w,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/fiores.jpg"),fit: BoxFit.cover),
+                            )),
+                  ),
+              
+            /* Text(
+                    'FIORES GLOBAL tarafından tasarlanmıştır.',
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 2.h,
                         color: Colors.black),
-                  ),
-                ],
-              ),
-            ),
+                  ), */
           ],
         ),
       ),
