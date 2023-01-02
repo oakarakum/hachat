@@ -12,19 +12,23 @@ class LoginPage extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           toolbarHeight: 0,
           toolbarOpacity: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
         ),
         body: SingleChildScrollView(
             child: Container(
-          height: 150.h,
+          height: 100.h,
           width: 100.w,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-            colors: [Color(0xffcfd8dc), Color(0xfffafafa), Color(0xffffa4a2)],
+            colors: [
+              Color(0xfff5f5f5),
+              Color(0xffffd6d3),
+              Color(0xffffa4a2),
+              Color(0xffffa4a2),
+            ],
             begin: Alignment.bottomLeft,
             end: Alignment.centerRight,
           )),
@@ -100,10 +104,10 @@ class LoginPage extends GetView<LoginController> {
                                 fontWeight: FontWeight.w500),
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color(0xff000a12), width: 0.2.w)),
+                                    color: Color(0xff000a12), width: 0.4.w)),
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color(0xff000a12), width: 0.2.w)),
+                                    color: Color(0xff000a12), width: 0.6.w)),
                           ),
                         ),
                       ),
@@ -172,11 +176,11 @@ class LoginPage extends GetView<LoginController> {
                                   enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Color(0xff000a12),
-                                          width: 0.2.w)),
+                                          width: 0.4.w)),
                                   focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                           color: Color(0xff000a12),
-                                          width: 0.2.w)),
+                                          width: 0.6.w)),
                                 ),
                               ),
                             ),
@@ -206,13 +210,23 @@ class LoginPage extends GetView<LoginController> {
                           width: 100.w,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5.w),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: .5.w,
+                                  blurRadius: 2,
+                                  offset: Offset(
+                                      0, 1), // changes position of shadow
+                                ),
+                              ],
                               gradient: LinearGradient(
-                                colors: [Color(0xfffafafa),
-                                 Color(0xffffa4a2)],
+                                colors: [
+                                  Color(0xffffcdd2),
+                                  Color(0xffffa4a2),
+                                ],
                                 begin: Alignment.bottomLeft,
                                 end: Alignment.topRight,
-                              )
-                              ),
+                              )),
                           child: Center(
                             child: Text(
                               "Giriş yap",

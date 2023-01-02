@@ -30,10 +30,9 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
             height: 100.h,
             width: 100.w,
             decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                  Color(0xffe2faea),
-                  Color(0xff5be3ab),
+                gradient: LinearGradient(colors: [
+              Color(0xffe2faea),
+              Color(0xff5be3ab),
             ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -61,7 +60,7 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                   //genel
                   height: 9.h,
                   width: 100.w,
-                  margin: EdgeInsets.only(top: 1.h,left: 5.w,right: 5.w),
+                  margin: EdgeInsets.only(top: 1.h, left: 5.w, right: 5.w),
                   decoration: BoxDecoration(
                       gradient: const LinearGradient(colors: [
                         Color(0xff80deea),
@@ -76,11 +75,11 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                       child: Text(
                         "Eczacılık Fakültesi",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 3.4.h,
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: .5.w,
-                            ),
+                          color: Colors.white,
+                          fontSize: 3.4.h,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: .5.w,
+                        ),
                       ),
                     ),
                   ),
@@ -89,7 +88,7 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                 Container(
                   height: 9.h,
                   width: 100.w,
-                  margin: EdgeInsets.only(top: 2.h,left: 5.w,right: 5.w),
+                  margin: EdgeInsets.only(top: 2.h, left: 5.w, right: 5.w),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(colors: [
                       Color(0xff80deea),
@@ -103,11 +102,11 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                       child: Text(
                         "Tıp Fakültesi",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 3.4.h,
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: .5.w,
-                            ),
+                          color: Colors.white,
+                          fontSize: 3.4.h,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: .5.w,
+                        ),
                       ),
                     ),
                   ),
@@ -115,7 +114,7 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                 Container(
                   height: 9.h,
                   width: 100.w,
-                  margin: EdgeInsets.only(top: 2.h,left: 5.w,right: 5.w),
+                  margin: EdgeInsets.only(top: 2.h, left: 5.w, right: 5.w),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(colors: [
                       Color(0xff80deea),
@@ -129,11 +128,11 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                       child: Text(
                         "Diş Fakültesi",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 3.4.h,
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: .5.w,
-                            ),
+                          color: Colors.white,
+                          fontSize: 3.4.h,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: .5.w,
+                        ),
                       ),
                     ),
                   ),
@@ -141,7 +140,7 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                 Container(
                   height: 9.h,
                   width: 100.w,
-                  margin: EdgeInsets.only(top: 2.h,left: 5.w,right: 5.w),
+                  margin: EdgeInsets.only(top: 2.h, left: 5.w, right: 5.w),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(colors: [
                       Color(0xff80deea),
@@ -155,16 +154,15 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                       child: Text(
                         "Eğitim Fakültesi",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 3.4.h,
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: .5.w,
-                            ),
+                          color: Colors.white,
+                          fontSize: 3.4.h,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: .5.w,
+                        ),
                       ),
                     ),
                   ),
                 ),
-                
               ],
             ),
           ),

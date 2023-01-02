@@ -97,11 +97,11 @@ class RegisterPage extends GetView<RegisterController> {
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: const Color(0xff000a12),
-                                      width: 0.2.w)),
+                                      width: 0.4.w)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: const Color(0xff000a12),
-                                      width: 0.2.w)),
+                                      width: 0.6.w)),
                             ),
                           ),
                           /*Kenarda dursun
@@ -157,11 +157,11 @@ class RegisterPage extends GetView<RegisterController> {
                                     enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
                                             color: const Color(0xff000a12),
-                                            width: 0.2.w)),
+                                            width: 0.4.w)),
                                     focusedBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
                                             color: const Color(0xff000a12),
-                                            width: 0.2.w)),
+                                            width: 0.6.w)),
                                   ),
                                 ),
                               )),
@@ -203,11 +203,11 @@ class RegisterPage extends GetView<RegisterController> {
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: const Color(0xff000a12),
-                                      width: 0.2.w)),
+                                      width: 0.4.w)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: const Color(0xff000a12),
-                                      width: 0.2.w)),
+                                      width: 0.6.w)),
                             ),
                           ),
                           //--------------SOYISIM------------------//
@@ -246,11 +246,11 @@ class RegisterPage extends GetView<RegisterController> {
                                 enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: const Color(0xff000a12),
-                                        width: 0.2.w)),
+                                        width: 0.4.w)),
                                 focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: const Color(0xff000a12),
-                                        width: 0.2.w)),
+                                        width: 0.6.w)),
                               ),
                             ),
                           ),
@@ -288,11 +288,11 @@ class RegisterPage extends GetView<RegisterController> {
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: const Color(0xff000a12),
-                                      width: 0.2.w)),
+                                      width: 0.4.w)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: const Color(0xff000a12),
-                                      width: 0.2.w)),
+                                      width: 0.6.w)),
                             ),
                           ),
                           //--------------Okul No------------------//
@@ -332,11 +332,11 @@ class RegisterPage extends GetView<RegisterController> {
                                 enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: const Color(0xff000a12),
-                                        width: 0.2.w)),
+                                        width: 0.4.w)),
                                 focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: const Color(0xff000a12),
-                                        width: 0.2.w)),
+                                        width: 0.6.w)),
                               ),
                             ),
                           ),
@@ -353,6 +353,15 @@ class RegisterPage extends GetView<RegisterController> {
                                 width: 100.w,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5.w),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0.2),
+                                        spreadRadius: .5.w,
+                                        blurRadius: 2,
+                                        offset: Offset(
+                                            0, 1), // changes position of shadow
+                                      ),
+                                    ],
                                     gradient: const LinearGradient(
                                       colors: [
                                         Color(0xfffafafa),

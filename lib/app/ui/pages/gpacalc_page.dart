@@ -11,6 +11,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Color.fromARGB(255, 178, 213, 210),
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 178, 213, 210),
@@ -199,7 +200,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                           Padding(
                             padding: EdgeInsets.only(left: 2.w, right: 5.w),
                             child: Text(
-                              "Add Course",
+                              "Ders Ekle",
                               style: TextStyle(
                                   color: Color(0xff125a64),
                                   fontSize: 2.h,
@@ -216,7 +217,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                           Padding(
                             padding: EdgeInsets.only(left: 2.w, right: 5.w),
                             child: Text(
-                              "Clear All",
+                              "Hepsini Sil",
                               style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 2.h,
@@ -227,20 +228,20 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(right: 2.w,top: 1.h),
+                      padding: EdgeInsets.only(right: 2.w, top: 1.h),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text("I. Sömestır GPA: ",
-                            style: TextStyle(
-                                color: Color(0xff125a64),
-                                fontSize: 1.8.h,
-                                fontWeight: FontWeight.w400)),
+                              style: TextStyle(
+                                  color: Color(0xff125a64),
+                                  fontSize: 1.8.h,
+                                  fontWeight: FontWeight.w400)),
                           Text("0.00",
-                            style: TextStyle(
-                                color: Color(0xff1a237e),
-                                fontSize: 1.8.h,
-                                fontWeight: FontWeight.w600))
+                              style: TextStyle(
+                                  color: Color(0xff1a237e),
+                                  fontSize: 1.8.h,
+                                  fontWeight: FontWeight.w600))
                         ],
                       ),
                     )
@@ -290,29 +291,28 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                 width: 100.w,
                 margin: EdgeInsets.only(top: 1.5.h),
                 decoration: BoxDecoration(
-                          color: Color(0xff125a64),
-                          borderRadius: BorderRadius.circular(1.w)),
-                          child: Center(
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 8.w),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("Ortalama GPA",
-                          style: TextStyle(
-                              color: Color(0xffFFFFFF),
-                              fontSize: 2.h,
-                              fontWeight: FontWeight.w700)),
-                                  Text("0.00",
-                          style: TextStyle(
-                              color: Color(0xffFFFFFF),
-                              fontSize: 2.h,
-                              fontWeight: FontWeight.w700)),
-
-                                ],
-                              ),
-                            ),
-                          ),
+                    color: Color(0xff125a64),
+                    borderRadius: BorderRadius.circular(1.w)),
+                child: Center(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Ortalama GPA",
+                            style: TextStyle(
+                                color: Color(0xffFFFFFF),
+                                fontSize: 2.h,
+                                fontWeight: FontWeight.w700)),
+                        Text("0.00",
+                            style: TextStyle(
+                                color: Color(0xffFFFFFF),
+                                fontSize: 2.h,
+                                fontWeight: FontWeight.w700)),
+                      ],
+                    ),
+                  ),
+                ),
               )
             ],
           ),

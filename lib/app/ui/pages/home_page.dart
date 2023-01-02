@@ -69,8 +69,12 @@ class HomePage extends GetView<HomeController> {
                 //child: Image.asset("assets/2202_w037_n003_224b_p1_224.jpg"))
               ),
               Padding(
-                padding:  EdgeInsets.only(top: 2.h),
-                child: Text("Hoş Geldiniz",style: TextStyle(color: Color(0xff4a148c),fontWeight: FontWeight.w400,fontSize: 3.h)),
+                padding: EdgeInsets.only(top: 2.h),
+                child: Text("Hoş Geldiniz",
+                    style: TextStyle(
+                        color: Color(0xff4a148c),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 3.h)),
               ),
               ListTile(
                 onLongPress: () {},
@@ -99,7 +103,6 @@ class HomePage extends GetView<HomeController> {
                   color: Color(0xff4a148c),
                 ),
               ),
-              
             ],
           ),
         ));

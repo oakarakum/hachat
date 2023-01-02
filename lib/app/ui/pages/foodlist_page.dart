@@ -14,7 +14,7 @@ class FoodlistPage extends GetView<FoodlistController> {
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 0,
-          backgroundColor: const Color(0xffb3e5fc),
+          backgroundColor: Color(0xffd1c4e9),
         ),
         bottomNavigationBar: CurvedNavigationBar(
           height: 57,
@@ -42,7 +42,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                     height: 30.h,
                     width: 100.w,
                     child: Image.asset(
-                      "assets/dining_hall2.jpg",
+                      "assets/dining_hallmin.jpg",
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -92,8 +92,8 @@ class FoodlistPage extends GetView<FoodlistController> {
                           height: 18.h,
                           width: 100.w,
                           child: Image.asset(
-                            "assets/dining_hall4.jpg",
-                            fit: BoxFit.fitWidth,
+                            "assets/dining_hall4min.jpg",
+                            fit: BoxFit.fill,
                           ),
                         ), //assets\food_cafe.jpg
 
