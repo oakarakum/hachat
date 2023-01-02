@@ -84,6 +84,13 @@ class FoodlistController extends GetxController {
                     ],
                   ),
                   Padding(
+                padding: EdgeInsets.symmetric(horizontal: 2.w),
+                child: Divider(
+                  thickness: .4.h,
+                  color: Color(0xffFFFFFF),
+                ),
+              ),
+                  Padding(
                     padding: EdgeInsets.only(left: 3.5.w, top: 1.5.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -180,6 +187,13 @@ class FoodlistController extends GetxController {
                       ),
                     ],
                   ),
+                  Padding(
+                padding: EdgeInsets.symmetric(horizontal: 3.w),
+                child: Divider(
+                  thickness: .4.h,
+                  color: Color(0xffFFFFFF),
+                ),
+              ),
                   Padding(
                     padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
                     child: Row(
@@ -286,6 +300,13 @@ class FoodlistController extends GetxController {
                           ),
                         ],
                       ),
+                      Padding(
+                padding: EdgeInsets.symmetric(horizontal: 3.w),
+                child: Divider(
+                  thickness: .4.h,
+                  color: Color(0xffFFFFFF),
+                ),
+              ),
                       Padding(
                         padding: EdgeInsets.only(left: 3.w, top: 1.5.h),
                         child: Row(

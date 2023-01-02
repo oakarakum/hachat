@@ -303,11 +303,9 @@ class RegisterPage extends GetView<RegisterController> {
                               autovalidateMode:
                                   AutovalidateMode.onUserInteraction,
                               validator: (value) {
-                                if (value!.length < 2) {
-                                  return "İsim iki harften kısa olamaz";
-                                } else if (value.length > 15) {
-                                  return "İsim on beş harften uzun olamaz";
-                                } else if (value.isEmpty) {
+                                if (value!.length != 8) {
+                                  return "Lütfen 8 haneli okul numaranızı girin";
+                                }  else if (value.isEmpty) {
                                   return "Alan boş bırakılamaz.";
                                 } else {
                                   return null;

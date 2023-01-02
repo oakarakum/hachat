@@ -14,17 +14,144 @@ class GpaCalcPage extends GetView<GpaCalcController> {
         resizeToAvoidBottomInset: false,
         backgroundColor: Color.fromARGB(255, 178, 213, 210),
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 178, 213, 210),
+          backgroundColor: Color(0xff125a64),
           centerTitle: true,
-          title: Text("GPA Calculator"),
+          title: Text("GPA Calculator",style: TextStyle(letterSpacing: .7.w,fontWeight: FontWeight.w700),),
           elevation: .5.w,
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 3.w),
           child: Column(
-            children: [SemesterContainer(), addCalcRow(), resultContainer()],
+            children: [
+              semesterBlock(),
+              addCalcRow(),
+              resultContainer()],
           ),
         ));
+  }
+
+  Container semesterBlock() {
+    return Container(
+    //beyaz kont
+    height: 48.8.h,
+    width: 100.w,
+    margin: EdgeInsets.symmetric(vertical: 1.5.h),
+    decoration: BoxDecoration(
+        color: Color(0xffFFFFFF),
+        border: Border.all(width: 0.5.w, color: Color(0xff006064))),
+    child: Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 2.w, top: 1.5.h),
+              child: Text("I.Sömestır ",
+                  style: TextStyle(
+                      color: Color(0xff1a237e),
+                      fontSize: 4.h,
+                      fontWeight: FontWeight.w500)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 1.h, right: 1.w),
+              child: Icon(
+                Icons.close,
+                color: Colors.red,
+              ),
+            )
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 2.w,top: .5.h),
+          child: Row(
+            children: [
+              Text("Ders",
+                  style: TextStyle(
+                      color: Color(0xff125a64),
+                      fontSize: 2.4.h,
+                      fontWeight: FontWeight.w600)),
+              Padding(
+                padding: EdgeInsets.only(left: 20.5.w),
+                child: Text("Harf Notu",
+                    style: TextStyle(
+                        color: Color(0xff125a64),
+                        fontSize: 2.4.h,
+                        fontWeight: FontWeight.w600)),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 4.5.w),
+                child: Text("Notlar",
+                    style: TextStyle(
+                        color: Color(0xff125a64),
+                        fontSize: 2.4.h,
+                        letterSpacing: .6.w,
+                        fontWeight: FontWeight.w600)),
+              ),
+            ],
+          ),
+        ),
+        dataListView(),
+        Padding(
+          padding: EdgeInsets.only(top: 1.2.h),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                  height: 2.h,
+                  width: 5.w,
+                  child: SvgPicture.asset("assets/plus.svg",
+                      color: Color(0xff125a64))),
+              Padding(
+                padding: EdgeInsets.only(left: 2.w, right: 10.w),
+                child: Text(
+                  "Ders Ekle",
+                  style: TextStyle(
+                      color: Color(0xff125a64),
+                      fontSize: 2.h,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+              SizedBox(
+                  height: 2.h,
+                  width: 5.w,
+                  child: SvgPicture.asset(
+                    "assets/close.svg",
+                    color: Colors.red,
+                  )),
+              Padding(
+                padding: EdgeInsets.only(left: 2.w, right: 5.w),
+                child: Text(
+                  "Hepsini Sil",
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 2.h,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(right: 2.w, top: 1.h),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text("I. Sömestır GPA: ",
+                  style: TextStyle(
+                      color: Color(0xff125a64),
+                      fontSize: 1.8.h,
+                      fontWeight: FontWeight.w400)),
+              Text("0.00",
+                  style: TextStyle(
+                      color: Color(0xff1a237e),
+                      fontSize: 1.8.h,
+                      fontWeight: FontWeight.w600))
+            ],
+          ),
+        )
+      ],
+    ),
+  );
   }
 
   Row addCalcRow() {
@@ -98,133 +225,10 @@ class GpaCalcPage extends GetView<GpaCalcController> {
     );
   }
 
-  Container SemesterContainer() {
-    return Container(
-      //beyaz kont
-      height: 47.h,
-      width: 100.w,
-      margin: EdgeInsets.symmetric(vertical: 1.5.h),
-      decoration: BoxDecoration(
-          color: Color(0xffFFFFFF),
-          border: Border.all(width: 0.5.w, color: Color(0xff006064))),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 2.w, top: 1.5.h),
-                child: Text("I.Sömestır ",
-                    style: TextStyle(
-                        color: Color(0xff1a237e),
-                        fontSize: 4.h,
-                        fontWeight: FontWeight.w500)),
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 1.h, right: 1.w),
-                child: Icon(
-                  Icons.close,
-                  color: Colors.red,
-                ),
-              )
-            ],
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 2.w),
-            child: Row(
-              children: [
-                Text("Ders",
-                    style: TextStyle(
-                        color: Color(0xff125a64),
-                        fontSize: 2.4.h,
-                        fontWeight: FontWeight.w600)),
-                Padding(
-                  padding: EdgeInsets.only(left: 20.5.w),
-                  child: Text("Harf Notu",
-                      style: TextStyle(
-                          color: Color(0xff125a64),
-                          fontSize: 2.4.h,
-                          fontWeight: FontWeight.w600)),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 4.5.w),
-                  child: Text("Notlar",
-                      style: TextStyle(
-                          color: Color(0xff125a64),
-                          fontSize: 2.4.h,
-                          letterSpacing: .6.w,
-                          fontWeight: FontWeight.w600)),
-                ),
-              ],
-            ),
-          ),
-          dataListView(),
-          Padding(
-            padding: EdgeInsets.only(top: 1.2.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                    height: 2.h,
-                    width: 5.w,
-                    child: SvgPicture.asset("assets/plus.svg",
-                        color: Color(0xff125a64))),
-                Padding(
-                  padding: EdgeInsets.only(left: 2.w, right: 5.w),
-                  child: Text(
-                    "Ders Ekle",
-                    style: TextStyle(
-                        color: Color(0xff125a64),
-                        fontSize: 2.h,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-                SizedBox(
-                    height: 2.h,
-                    width: 5.w,
-                    child: SvgPicture.asset(
-                      "assets/close.svg",
-                      color: Colors.red,
-                    )),
-                Padding(
-                  padding: EdgeInsets.only(left: 2.w, right: 5.w),
-                  child: Text(
-                    "Hepsini Sil",
-                    style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 2.h,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(right: 2.w, top: 1.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text("I. Sömestır GPA: ",
-                    style: TextStyle(
-                        color: Color(0xff125a64),
-                        fontSize: 1.8.h,
-                        fontWeight: FontWeight.w400)),
-                Text("0.00",
-                    style: TextStyle(
-                        color: Color(0xff1a237e),
-                        fontSize: 1.8.h,
-                        fontWeight: FontWeight.w600))
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
+  
   SizedBox dataListView() {
     return SizedBox(
-      height: 30.h,
+      height: 32.h,
       width: 100.w,
       child: ListView.builder(
         itemCount: 5,
