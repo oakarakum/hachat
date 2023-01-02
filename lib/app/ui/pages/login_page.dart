@@ -55,11 +55,11 @@ class LoginPage extends GetView<LoginController> {
                       Padding(
                         padding: EdgeInsets.only(top: 1.2.h, bottom: 1.2.h),
                         child: Text(
-                          "Hesabına giriş yap",
+                          "HOŞ GELDİNİZ",
                           style: TextStyle(
                               color: Color(0xffe53935),
                               fontSize: 3.h,
-                              fontWeight: FontWeight.w400),
+                              fontWeight: FontWeight.w600),
                         ),
                       ),
                       Row(
@@ -70,7 +70,7 @@ class LoginPage extends GetView<LoginController> {
                             style: TextStyle(
                                 color: Color(0xff000a12),
                                 letterSpacing: 1,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w700,
                                 fontSize: 2.h),
                           ),
                         ],
@@ -119,7 +119,7 @@ class LoginPage extends GetView<LoginController> {
                             style: TextStyle(
                                 color: Color(0xff000a12),
                                 letterSpacing: 1,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w700,
                                 fontSize: 2.h),
                           ),
                         ],
@@ -195,7 +195,7 @@ class LoginPage extends GetView<LoginController> {
                               style: TextStyle(
                                   color: Color(0xffEA4335),
                                   fontSize: 2.h,
-                                  fontWeight: FontWeight.w400))
+                                  fontWeight: FontWeight.w500))
                         ],
                       ),
                       SizedBox(
@@ -249,7 +249,7 @@ class LoginPage extends GetView<LoginController> {
                               style: TextStyle(
                                   color: Color(0xff000a12),
                                   fontSize: 2.h,
-                                  fontWeight: FontWeight.w400,
+                                  fontWeight: FontWeight.w500,
                                   letterSpacing: 0.3.w)),
                           SizedBox(
                             width: .8.w,

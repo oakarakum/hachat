@@ -41,7 +41,7 @@ class RegisterPage extends GetView<RegisterController> {
                   FadeInLeftBig(
                     child: Container(
                       //Register en üst fotoğraf
-                      height: 25.h,
+                      height: 26.h,
                       width: 100.w,
                       decoration: const BoxDecoration(
                           image: DecorationImage(
@@ -55,13 +55,13 @@ class RegisterPage extends GetView<RegisterController> {
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 1.2.h, bottom: 1.2.h),
+                            padding: EdgeInsets.symmetric(vertical: 2.h),
                             child: Text(
                               "Hesap Oluştur",
                               style: TextStyle(
                                   color: const Color(0xffe53935),
                                   fontSize: 3.h,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w600),
                             ),
                           ),
                           //Email
@@ -375,7 +375,7 @@ class RegisterPage extends GetView<RegisterController> {
                                     "Hesap Oluştur",
                                     style: TextStyle(
                                         color: const Color(0xffe53935),
-                                        fontSize: 2.7.h,
+                                        fontSize: 3.h,
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1),
                                   ),
