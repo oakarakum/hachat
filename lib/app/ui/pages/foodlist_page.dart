@@ -31,18 +31,23 @@ class FoodlistPage extends GetView<FoodlistController> {
               height: 119.h,
               width: 100.w,
               decoration: const BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                Color(0xffe1bee7),
-                Color(0xffd1c4e9),
-                Color(0xffd7ccc8),
-              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xffe1bee7),
+                    Color(0xffd1c4e9),
+                    Color(0xffd7ccc8),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
               child: Column(
                 children: [
                   SizedBox(
                     height: 30.h,
                     width: 100.w,
                     child: Image.asset(
-                      "assets/dining_hallmin.jpg",
+                      "assets/dining_hall16_9.jpg",
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -89,10 +94,10 @@ class FoodlistPage extends GetView<FoodlistController> {
                           ),
                         ),
                         SizedBox(
-                          height: 18.h,
+                          height: 20.h,
                           width: 100.w,
                           child: Image.asset(
-                            "assets/dining_hall4min.jpg",
+                            "assets/dining_hall4.jpg",
                             fit: BoxFit.fill,
                           ),
                         ), //assets\food_cafe.jpg
@@ -228,7 +233,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                 Text(
                   "Pazar",
                   style: TextStyle(
-                      color: Color(0xffff6f60),
+                      color: Color(0xff455a64),
                       fontSize: 2.2.h,
                       fontWeight: FontWeight.w500),
                 ),
@@ -240,7 +245,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                   decoration: BoxDecoration(
                     border: Border.all(
                       width: 0.3.w,
-                      color: Color(0xffff5252),
+                      color: Color(0xff455a64),
                     ),
                   ),
                   child: Padding(
@@ -256,7 +261,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                             Text(
                               "1",
                               style: TextStyle(
-                                  color: Color(0xffff5252),
+                                  color: Color(0xff455a64),
                                   fontSize: 1.8.h,
                                   fontWeight: FontWeight.w400),
                             )
@@ -316,7 +321,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                 Text(
                   "Pazartesi",
                   style: TextStyle(
-                      color: Color(0xff455a64),
+                      color: Color(0xffff6f60),
                       fontSize: 2.2.h,
                       fontWeight: FontWeight.w400),
                 ),
@@ -327,7 +332,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                   width: 50.w,
                   decoration: BoxDecoration(
                       border:
-                          Border.all(width: 0.3.w, color: Color(0xff455a64))),
+                          Border.all(width: 0.3.w, color: Color(0xffff6f60))),
                   child: Padding(
                     padding: EdgeInsets.all(1.w),
                     child: Column(
@@ -341,7 +346,7 @@ class FoodlistPage extends GetView<FoodlistController> {
                             Text(
                               "2",
                               style: TextStyle(
-                                  color: Color(0xff455a64),
+                                  color: Color(0xffff6f60),
                                   fontSize: 1.8.h,
                                   fontWeight: FontWeight.w400),
                             )

@@ -15,7 +15,7 @@ class RingsPage extends GetView<RingsController> {
         backgroundColor: Color(0xff000000),
         appBar: AppBar(
           toolbarHeight: 0,
-          backgroundColor: Color(0xffffccbc),
+          backgroundColor: Color(0xff000000),
         ),
         bottomNavigationBar: CurvedNavigationBar(
           height: 57,
