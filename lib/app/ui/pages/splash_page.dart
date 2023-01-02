@@ -52,16 +52,25 @@ class SplashPage extends GetView<SplashController> {
               ),
             ),
             SizedBox(
-              height: 9.5.h,
+              height: 2.h,
             ),
             FadeInUpBig(
               delay: const Duration(milliseconds: 500),
-              child: Text(
-                'Coded by FIORES GLOBAL',
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 2.h,
-                    color: Colors.black),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                      height: 6.h,
+                      width: 15.w,
+                      child: Image.asset("assets/fiores.jpg")),
+                  Text(
+                    'Coded by FIORES GLOBAL',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 2.h,
+                        color: Colors.black),
+                  ),
+                ],
               ),
             ),
           ],
