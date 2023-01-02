@@ -2,7 +2,6 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../controllers/home_controller.dart';
@@ -39,26 +38,8 @@ class HomePage extends GetView<HomeController> {
           ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
           child: Column(
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 1.4.h),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                        height: 2.6.h,
-                        width: 10.w,
-                        child: Image.asset("assets/menu-bar.png",
-                            color: Color(0xff4a148c))),
-                    Icon(
-                      Icons.settings,
-                      color: Color(0xff4a148c),
-                      size: 3.4.h,
-                    )
-                  ],
-                ),
-              ),
               Container(
-                height: 30.h,
+                height: 45.h,
                 width: 100.w,
                 decoration: BoxDecoration(
                     image: DecorationImage(
@@ -70,37 +51,165 @@ class HomePage extends GetView<HomeController> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: 2.h),
-                child: Text("Hoş Geldiniz",
-                    style: TextStyle(
-                        color: Color(0xff4a148c),
-                        fontWeight: FontWeight.w400,
-                        fontSize: 3.h)),
-              ),
-              ListTile(
-                onLongPress: () {},
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(width: 5.w, color: Colors.blue),
-                    borderRadius: BorderRadius.circular(5.w)),
-                leading: Icon(Icons.calculate,
-                    size: 3.5.h, color: const Color(0xff4a148c)),
-                title: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 4.w),
-                  child: GestureDetector(
-                    onTap: () {
-                      controller.gpaPage();
-                    },
-                    child: Text(
-                      "GPA Hesaplama",
-                      style: TextStyle(
-                          color: Color(0xff4a148c),
-                          fontWeight: FontWeight.w500,
-                          fontSize: 3.h),
-                    ),
-                  ),
+                child: Text(
+                  "Ana Sayfa",
+                  style: TextStyle(
+                      color: Color(0xfffff9c4),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 4.h,
+                      letterSpacing: .5.w),
                 ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Color(0xff4a148c),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.w),
+                child: Divider(
+                  thickness: .4.h,
+                  color: Color(0xffFFFFFF),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: Column(
+                  children: [
+                    ListTile(
+                      onLongPress: () {},
+                      leading: Padding(
+                        padding: EdgeInsets.only(left: 5.w),
+                        child: Icon(Icons.calculate,
+                            size: 3.5.h, color: const Color(0xfffff9c4)),
+                      ),
+                      title: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 4.w),
+                        child: GestureDetector(
+                          onTap: () {
+                            controller.gpaPage();
+                          },
+                          child: Text(
+                            "GPA Hesaplama",
+                            style: TextStyle(
+                                color: Color(0xfffff9c4),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 3.h),
+                          ),
+                        ),
+                      ),
+                      trailing: Padding(
+                        padding: EdgeInsets.only(right: 5.w),
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          color: const Color(0xfffff9c4),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 2.h),
+                      child: ListTile(
+                        onLongPress: () {},
+                        leading: Padding(
+                          padding: EdgeInsets.only(left: 5.w),
+                          child: Icon(Icons.announcement,
+                              size: 3.5.h, color: const Color(0xfffff9c4)),
+                        ),
+                        title: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 4.w),
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.gpaPage();
+                            },
+                            child: Padding(
+                              padding:  EdgeInsets.only(bottom: .3.h),
+                              child: Text(
+                                "Duyurular",
+                                style: TextStyle(
+                                    color: Color(0xfffff9c4),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 3.h),
+                              ),
+                            ),
+                          ),
+                        ),
+                        trailing: Padding(
+                          padding: EdgeInsets.only(right: 5.w),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            color: const Color(0xfffff9c4),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.only(top: 2.h),
+                      child: ListTile(
+                        onTap: () {},
+                        leading: Padding(
+                          padding: EdgeInsets.only(left: 5.w),
+                          child: Icon(Icons.event,
+                              size: 3.5.h, color: const Color(0xfffff9c4)),
+                        ),
+                        title: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 4.w),
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.gpaPage();
+                            },
+                            child: Padding(
+                              padding:  EdgeInsets.only(bottom: .2.h),
+                              child: Text(
+                                "Etkinlikler",
+                                style: TextStyle(
+                                    color: const Color(0xfffff9c4),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 3.h),
+                              ),
+                            ),
+                          ),
+                        ),
+                        trailing: Padding(
+                          padding: EdgeInsets.only(right: 4.7.w),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color(0xfffff9c4),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:  EdgeInsets.only(top: 1.5.h),
+                      child: ListTile(
+                        onLongPress: () {},
+                        leading: Padding(
+                          padding: EdgeInsets.only(left: 5.w),
+                          child: Icon(Icons.info,
+                              size: 3.5.h, color: const Color(0xfffff9c4)),
+                        ),
+                        title: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 4.w),
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.gpaPage();
+                            },
+                            child: Padding(
+                              padding:  EdgeInsets.only(bottom: .2.h),
+                              child: Text(
+                                "Hakkımızda",
+                                style: TextStyle(
+                                    color: const Color(0xfffff9c4),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 3.h),
+                              ),
+                            ),
+                          ),
+                        ),
+                        trailing: Padding(
+                          padding: EdgeInsets.only(right: 4.7.w),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color(0xfffff9c4),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
