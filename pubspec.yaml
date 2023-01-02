@@ -32,10 +32,6 @@ dependencies:
   responsive_sizer: ^3.1.1
   flutter_svg: ^1.1.6
   animate_do: ^3.0.2
-  google_fonts: ^3.0.1
-  photo_view: ^0.14.0
-  auto_size_text: ^3.0.0
-  google_nav_bar: ^5.0.6
   curved_navigation_bar: ^1.0.3
 
 

@@ -56,113 +56,130 @@ class AcademicCalendarPage extends GetView<AcademicCalendarController> {
                         fontWeight: FontWeight.w600),
                   ),
                 ),
-                Container(
-                  //genel
-                  height: 9.h,
-                  width: 100.w,
-                  margin: EdgeInsets.only(top: 1.h, left: 5.w, right: 5.w),
-                  decoration: BoxDecoration(
-                      gradient: const LinearGradient(colors: [
-                        Color(0xff80deea),
-                        Color(0xff26c6da),
-                      ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-                      borderRadius: BorderRadius.circular(4.w),
-                      image: const DecorationImage(
-                          image: AssetImage("assets/beytepe-anit.jpg"))),
-                  child: Center(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 1.w),
-                      child: Text(
-                        "Eczacılık Fakültesi",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 3.4.h,
-                          fontWeight: FontWeight.w400,
-                          letterSpacing: .5.w,
+
+                //Eczacılık
+                Padding(
+                  padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100.w, 7.h),
+                        elevation: 1.2.h,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(3.w)),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 5.w, vertical: 2.h),
+                        backgroundColor: const Color(0xff80cbc4),
+                        side: BorderSide(
+                            width: .4.w, color: const Color(0xff4f9a94))),
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 1.w),
+                        child: Text(
+                          "Fen Fakültesi",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 3.4.h,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: .5.w,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
+                )
                 //tıp
-                Container(
-                  height: 9.h,
-                  width: 100.w,
-                  margin: EdgeInsets.only(top: 2.h, left: 5.w, right: 5.w),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(colors: [
-                      Color(0xff80deea),
-                      Color(0xff26c6da),
-                    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-                    borderRadius: BorderRadius.circular(4.w),
-                  ),
-                  child: Center(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 1.w),
-                      child: Text(
-                        "Tıp Fakültesi",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 3.4.h,
-                          fontWeight: FontWeight.w400,
-                          letterSpacing: .5.w,
+                ,
+                Padding(
+                  padding: EdgeInsets.only(top: 3.h, left: 5.w, right: 5.w),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100.w, 7.h),
+                        elevation: 1.2.h,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(3.w)),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 5.w, vertical: 2.h),
+                        backgroundColor: const Color(0xff80cbc4),
+                        side: BorderSide(
+                            width: .4.w, color: const Color(0xff4f9a94))),
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 1.w),
+                        child: Text(
+                          "Tıp Fakültesi",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 3.4.h,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: .5.w,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-                Container(
-                  height: 9.h,
-                  width: 100.w,
-                  margin: EdgeInsets.only(top: 2.h, left: 5.w, right: 5.w),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(colors: [
-                      Color(0xff80deea),
-                      Color(0xff26c6da),
-                    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-                    borderRadius: BorderRadius.circular(4.w),
-                  ),
-                  child: Center(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 1.w),
-                      child: Text(
-                        "Diş Fakültesi",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 3.4.h,
-                          fontWeight: FontWeight.w400,
-                          letterSpacing: .5.w,
+                Padding(
+                  padding: EdgeInsets.only(top: 3.h, left: 5.w, right: 5.w),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100.w, 7.h),
+                        elevation: 1.2.h,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(3.w)),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 5.w, vertical: 2.h),
+                        backgroundColor: const Color(0xff80cbc4),
+                        side: BorderSide(
+                            width: .4.w, color: const Color(0xff4f9a94))),
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 1.w),
+                        child: Text(
+                          "Diş Fakültesi",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 3.4.h,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: .5.w,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-                Container(
-                  height: 9.h,
-                  width: 100.w,
-                  margin: EdgeInsets.only(top: 2.h, left: 5.w, right: 5.w),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(colors: [
-                      Color(0xff80deea),
-                      Color(0xff26c6da),
-                    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-                    borderRadius: BorderRadius.circular(4.w),
-                  ),
-                  child: Center(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 1.w),
-                      child: Text(
-                        "Eğitim Fakültesi",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 3.4.h,
-                          fontWeight: FontWeight.w400,
-                          letterSpacing: .5.w,
+                Padding(
+                  padding: EdgeInsets.only(top: 3.h, left: 5.w, right: 5.w),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100.w, 7.h),
+                        elevation: 1.2.h,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(3.w)),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 5.w, vertical: 2.h),
+                        backgroundColor: const Color(0xff80cbc4),
+                        side: BorderSide(
+                            width: .4.w, color: const Color(0xff4f9a94))),
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 1.w),
+                        child: Text(
+                          "Eğitim Fakültesi",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 3.4.h,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: .5.w,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
+                )
               ],
             ),
           ),

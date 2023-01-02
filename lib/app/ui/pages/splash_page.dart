@@ -4,7 +4,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../controllers/splash_controller.dart';
 
@@ -46,7 +45,7 @@ class SplashPage extends GetView<SplashController> {
             FadeInUpBig(
               child: Text(
                 'Hacettepe Üniversitesi',
-                style: GoogleFonts.ptSerif(
+                style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 3.5.h,
                     color: Colors.black),
