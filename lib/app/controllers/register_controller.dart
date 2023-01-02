@@ -37,17 +37,18 @@ class RegisterController extends GetxController {
             Get.toNamed(Routes.LOGIN);
           },
           child: Container(
-            height: 6.h,
-            width: 25.w,
-            decoration:  BoxDecoration(
-              color: Color(0xffef5350),
-              borderRadius: BorderRadius.circular(5.w)
-            ),
-              child:  Center(
+              height: 6.h,
+              width: 60.w,
+              decoration: BoxDecoration(
+                  color: Color(0xffef5350),
+                  borderRadius: BorderRadius.circular(5.w)),
+              child: Center(
                 child: Text(
-            "Giriş yap",
-            style: TextStyle(color: Colors.white),
-          ),
+                  "Giriş yap",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               )),
         ));
   }

@@ -15,7 +15,7 @@ class RegisterPage extends GetView<RegisterController> {
         appBar: AppBar(
           toolbarHeight: 0,
           toolbarOpacity: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
         ),
         body: SingleChildScrollView(
             physics: const BouncingScrollPhysics(
@@ -61,7 +61,7 @@ class RegisterPage extends GetView<RegisterController> {
                               style: TextStyle(
                                   color: const Color(0xffe53935),
                                   fontSize: 3.h,
-                                  fontWeight: FontWeight.w400),
+                                  fontWeight: FontWeight.w500),
                             ),
                           ),
                           //Email

@@ -123,7 +123,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                                         hintStyle: TextStyle(
                                             color: Color(0xff125a64),
                                             fontSize: 1.5.h,
-                                            fontWeight: FontWeight.w300)),
+                                            fontWeight: FontWeight.w800)),
                                   ),
                                 ),
                                 Padding(
