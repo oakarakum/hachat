@@ -44,7 +44,7 @@ class FoodlistPage extends GetView<FoodlistController> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 30.h,
+                    height: 28.h,
                     width: 100.w,
                     child: Image.asset(
                       "assets/dining_hall16_9.jpg",

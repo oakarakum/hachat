@@ -55,21 +55,16 @@ class FoodlistController extends GetxController {
         enableDrag: true,
         elevation: 1,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))
-            ),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
         builder: (context) => Container(
-              decoration:  BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
                     Color(0xffe1bee7),
                     Color(0xffd1c4e9),
                     Color(0xffd7ccc8),
-                    ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight),
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))
-                      
-                      ),
+                  ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(5.w))),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -108,8 +103,8 @@ class FoodlistController extends GetxController {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 3.5.w),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 1.5.h, horizontal: 3.5.w),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -159,12 +154,14 @@ class FoodlistController extends GetxController {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
         builder: (context) => Container(
-              decoration: const BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                Color(0xffe1bee7),
-                Color(0xffd1c4e9),
-                Color(0xffd7ccc8),
-              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: const [
+                    Color(0xffe1bee7),
+                    Color(0xffd1c4e9),
+                    Color(0xffd7ccc8),
+                  ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(5.w))),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -250,7 +247,6 @@ class FoodlistController extends GetxController {
             ));
   }
 
-//1035
   foodSaModal(BuildContext context) {
     showModalBottomSheet(
         context: context,
@@ -261,12 +257,14 @@ class FoodlistController extends GetxController {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(5.w))),
         builder: (context) => Container(
-              decoration: const BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                Color(0xffe1bee7),
-                Color(0xffd1c4e9),
-                Color(0xffd7ccc8),
-              ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: const [
+                    Color(0xffe1bee7),
+                    Color(0xffd1c4e9),
+                    Color(0xffd7ccc8),
+                  ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(5.w))),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
