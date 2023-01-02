@@ -20,7 +20,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
           elevation: .5.w,
         ),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w),
+          padding: EdgeInsets.symmetric(horizontal: 3.w),
           child: Column(
             children: [SemesterContainer(), addCalcRow(), resultContainer()],
           ),
@@ -237,19 +237,20 @@ class GpaCalcPage extends GetView<GpaCalcController> {
               children: [
                 SizedBox(
                   //ders field
-                  height: 4.3.h,
+                  height: 5.h,
                   width: 28.w,
                   child: TextFormField(
-                    textAlignVertical: TextAlignVertical.bottom,
+                    //textAlignVertical: TextAlignVertical.bottom,
                     decoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(top: 1.h, left: 3.w),
                         border: InputBorder.none,
                         filled: true,
                         fillColor: Color.fromARGB(255, 178, 213, 210),
-                        hintText: "Ör. Matematik",
+                        hintText: "Ör. Fizik",
                         hintStyle: TextStyle(
                             color: Color(0xff125a64),
-                            fontSize: 1.5.h,
-                            fontWeight: FontWeight.w800),
+                            fontSize: 2.h,
+                            fontWeight: FontWeight.w600),
                         focusedBorder: OutlineInputBorder(),
                         enabledBorder: OutlineInputBorder()),
                   ),
@@ -258,8 +259,8 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                   //harf notu
                   padding: EdgeInsets.only(left: 3.w),
                   child: Obx(() => Container(
-                        height: 4.3.h,
-                        width: 21.5.w,
+                        height: 5.h,
+                        width: 22.w,
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.black),
                             borderRadius: BorderRadius.circular(1.w),
@@ -291,10 +292,10 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                 //not
                 Padding(
                   //harf notu
-                  padding: EdgeInsets.only(left: 5.w),
+                  padding: EdgeInsets.only(left: 4.5.w),
                   child: SizedBox(
-                    height: 4.3.h,
-                    width: 17.w,
+                    height: 5.h,
+                    width: 23.w,
                     child: TextFormField(
                       keyboardType: TextInputType.number,
                       textAlignVertical: TextAlignVertical.bottom,
@@ -305,8 +306,9 @@ class GpaCalcPage extends GetView<GpaCalcController> {
                           hintText: "Ör.50",
                           hintStyle: TextStyle(
                               color: Color(0xff125a64),
-                              fontSize: 1.5.h,
-                              fontWeight: FontWeight.w800),
+                              fontSize: 2.h,
+                              letterSpacing: 1,
+                              fontWeight: FontWeight.w600),
                           focusedBorder: OutlineInputBorder(),
                           enabledBorder: OutlineInputBorder()),
                     ),
@@ -330,13 +332,14 @@ class GpaCalcPage extends GetView<GpaCalcController> {
       ),
     );
   }
+//                        contentPadding: EdgeInsets.only(top: 1.h, left: 3.w),
 
 //qqq
   DropdownButton<String> dropDownGrade() {
     return DropdownButton<String>(
       value: controller.dropdownvalue.value,
       icon: Padding(
-        padding: EdgeInsets.only(left: 8.w, top: .8.h),
+        padding: EdgeInsets.only(left: 8.w, bottom: .4.h),
         child: SvgPicture.asset(
           "assets/arrow_down_ios.svg",
           height: .7.h,
@@ -356,12 +359,12 @@ class GpaCalcPage extends GetView<GpaCalcController> {
         return DropdownMenuItem<String>(
           value: value,
           child: Padding(
-            padding: EdgeInsets.only(left: 4.w, top: .7.h),
+            padding: EdgeInsets.only(left: 3.w, bottom: .4.h),
             child: Text(
               value,
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 1.5.h,
+                fontWeight: FontWeight.w500,
+                fontSize: 2.h,
               ),
             ),
           ),
