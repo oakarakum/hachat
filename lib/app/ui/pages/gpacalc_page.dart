@@ -227,7 +227,7 @@ class GpaCalcPage extends GetView<GpaCalcController> {
       height: 30.h,
       width: 100.w,
       child: ListView.builder(
-        itemCount: 6,
+        itemCount: 5,
         itemBuilder: (context, index) {
           return Padding(
             //
@@ -237,68 +237,78 @@ class GpaCalcPage extends GetView<GpaCalcController> {
               children: [
                 SizedBox(
                   //ders field
-                  height: 4.h,
+                  height: 4.3.h,
                   width: 28.w,
                   child: TextFormField(
-                    textAlignVertical: TextAlignVertical.center,
+                    textAlignVertical: TextAlignVertical.bottom,
                     decoration: InputDecoration(
+                        border: InputBorder.none,
                         filled: true,
                         fillColor: Color.fromARGB(255, 178, 213, 210),
                         hintText: "Ör. Matematik",
                         hintStyle: TextStyle(
                             color: Color(0xff125a64),
                             fontSize: 1.5.h,
-                            fontWeight: FontWeight.w800)),
+                            fontWeight: FontWeight.w800),
+                        focusedBorder: OutlineInputBorder(),
+                        enabledBorder: OutlineInputBorder()),
                   ),
                 ),
                 Padding(
                   //harf notu
                   padding: EdgeInsets.only(left: 3.w),
-                  child: SizedBox(
-                    height: 4.h,
-                    width: 21.w,
-                    child: //dropDownGrade(),
-                        TextFormField(
-                      textAlignVertical: TextAlignVertical.center,
-                      decoration: InputDecoration(
-
-                          /* suffixIcon: Icon(
-                                        Icons.arrow_drop_down,
-                                        size: 2.w,
-                                      ) /* /* SvgPicture.asset(
-                                          "assets/arrow_down_ios.svg",
-                                          height: 2.h,
-                                          width: 2.w,
-                                        ), */ */
-                                      , */
-                          filled: true,
-                          fillColor: Color.fromARGB(255, 178, 213, 210),
-                          hintText: "Ör. AA",
-                          hintStyle: TextStyle(
-                              color: Color(0xff125a64),
-                              fontSize: 1.5.h,
-                              fontWeight: FontWeight.w800)),
-                    ),
-                  ),
+                  child: Obx(() => Container(
+                        height: 4.3.h,
+                        width: 21.5.w,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black),
+                            borderRadius: BorderRadius.circular(1.w),
+                            color: Color.fromARGB(255, 178, 213, 210)),
+                        child: dropDownGrade(),
+                        /* TextFormField(
+                                        textAlignVertical: TextAlignVertical.center,
+                                        decoration: InputDecoration(
+                  
+                                            /* suffixIcon: Icon(
+                                                          Icons.arrow_drop_down,
+                                                          size: 2.w,
+                                                        ) /* /* SvgPicture.asset(
+                                                            "assets/arrow_down_ios.svg",
+                                                            height: 2.h,
+                                                            width: 2.w,
+                                                          ), */ */
+                                                        , */
+                                            filled: true,
+                                            fillColor: Color.fromARGB(255, 178, 213, 210),
+                                            hintText: "Ör. AA",
+                                            hintStyle: TextStyle(
+                                                color: Color(0xff125a64),
+                                                fontSize: 1.5.h,
+                                                fontWeight: FontWeight.w800)),
+                                      ), */
+                      )),
                 ),
                 //not
                 Padding(
                   //harf notu
                   padding: EdgeInsets.only(left: 5.w),
                   child: SizedBox(
-                    height: 4.h,
+                    height: 4.3.h,
                     width: 17.w,
                     child: TextFormField(
                       keyboardType: TextInputType.number,
-                      textAlignVertical: TextAlignVertical.center,
+                      textAlignVertical: TextAlignVertical.bottom,
                       decoration: InputDecoration(
+                          border: InputBorder.none,
                           filled: true,
                           fillColor: Color.fromARGB(255, 178, 213, 210),
                           hintText: "Ör.50",
                           hintStyle: TextStyle(
                               color: Color(0xff125a64),
                               fontSize: 1.5.h,
-                              fontWeight: FontWeight.w800)),
+                              fontWeight: FontWeight.w800),
+                          focusedBorder: OutlineInputBorder(),
+                          enabledBorder: OutlineInputBorder()),
                     ),
                   ),
                 ),
@@ -321,16 +331,22 @@ class GpaCalcPage extends GetView<GpaCalcController> {
     );
   }
 
+//qqq
   DropdownButton<String> dropDownGrade() {
     return DropdownButton<String>(
       value: controller.dropdownvalue.value,
       icon: Padding(
-        padding: EdgeInsets.only(left: 1.w),
-        child: SvgPicture.asset("assets/arrow_down_ios.svg"),
+        padding: EdgeInsets.only(left: 8.w, top: .8.h),
+        child: SvgPicture.asset(
+          "assets/arrow_down_ios.svg",
+          height: .7.h,
+          width: .7.h,
+          color: Colors.black,
+        ),
       ),
 
       //dropdownColor: Colors.green,
-      style: TextStyle(color: Colors.green),
+      style: TextStyle(color: Color(0xff125a64)),
       onChanged: (String? value) {
         // This is called when the user selects an item.
 
@@ -340,10 +356,13 @@ class GpaCalcPage extends GetView<GpaCalcController> {
         return DropdownMenuItem<String>(
           value: value,
           child: Padding(
-            padding: EdgeInsets.only(left: 4.w),
+            padding: EdgeInsets.only(left: 4.w, top: .7.h),
             child: Text(
               value,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 1.5.h,
+              ),
             ),
           ),
         );
